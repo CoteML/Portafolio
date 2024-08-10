@@ -2,14 +2,9 @@
   #style.css
 \*-----------------------------------*/
 
-
 /**
  * copyright 2022 @codewithsadee
  */
-
-
-
-
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -17,22 +12,21 @@
 
 :root {
 
-  /**
-   * colors
-   */
+  /*** colors*/ 
 
   /* gradient */
-
+   /* fondo logo y testimonios */
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 25%) 3%, 
-    hsl(0, 0%, 19%) 97%
+    #2b2a53,
+    #2b2a53
   );
+   /* fondo que hago */
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 18%, 0.251) 0%, 
-    hsla(240, 2%, 11%, 0) 100%
-  ), hsl(240, 2%, 13%);
+    #2b2a53 0%, 
+    #1b1b1d00 100%
+  ), #1d1c38;
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
     hsl(45, 100%, 71%) 0%, 
@@ -43,35 +37,39 @@
     hsla(45, 100%, 71%, 0.251) 0%, 
     hsla(35, 100%, 68%, 0) 59.86%
   ), hsl(240, 2%, 13%);
+   /* linea que hago */
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
-    hsla(0, 0%, 25%, 0) 50%
+    #32326e, 
+    rgba(53,53, 64, 0)
   );
   --text-gradient-yellow: linear-gradient(
     to right, 
-    hsl(45, 100%, 72%), 
-    hsl(35, 100%, 68%)
+    hsl(323, 70%, 75%),
+    hsl(322, 99%, 57%)
   );
 
   /* solid */
 
-  --jet: hsl(0, 0%, 22%);
-  --onyx: hsl(240, 1%, 17%);
-  --eerie-black-1: hsl(240, 2%, 13%);
-  --eerie-black-2: hsl(240, 2%, 12%);
-  --smoky-black: hsl(0, 0%, 7%);
-  --white-1: hsl(0, 0%, 100%);
-  --white-2: hsl(0, 0%, 98%);
-  --orange-yellow-crayola: hsl(45, 100%, 72%);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+   /* borde */
+  --jet: #32326e;
+   /* fondo Diseñadora */
+  --onyx:#2b2a53;
+   /* fondo iconos */
+  --eerie-black-1: #1d1c38;
+   /* 2do fondo */
+  --eerie-black-2: #22203f;
+   /* fondo */
+  --smoky-black: #1d1c38;
+  --white-1: #f2f2f2;
+  --white-2: #f2f2f2;
+  --orange-yellow-crayola: hsl(322, 99%, 57%);
+  --vegas-gold: hsl(322, 99%, 57%);
+  --light-gray: #f2f2f2;
+  --light-gray-70: #f2f2f2; 
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
-  /**
-   * typography
-   */
+  /*** typography */
 
   /* font-family */
   --ff-poppins: 'Poppins', sans-serif;
@@ -92,9 +90,7 @@
   --fw-500: 500;
   --fw-600: 600;
 
-  /**
-   * shadow
-   */
+  /*** shadow */
   
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
@@ -102,18 +98,12 @@
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
   --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
-  /**
-   * transition
-   */
+  /*** transition*/
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 
 }
-
-
-
-
 
 /*-----------------------------------*\
   #RESET
@@ -156,9 +146,6 @@ input, textarea {
 html { font-family: var(--ff-poppins); }
 
 body { background: var(--smoky-black); }
-
-
-
 
 
 /*-----------------------------------*\
@@ -224,7 +211,7 @@ article.active {
 .h3,
 .h4,
 .h5 {
-  color: var(--white-2);
+  color: #f2f2f2;
   text-transform: capitalize;
 }
 
@@ -292,10 +279,6 @@ article.active {
   z-index: -1;
 }
 
-
-
-
-
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -305,10 +288,6 @@ main {
   margin-bottom: 75px;
   min-width: 259px;
 }
-
-
-
-
 
 /*-----------------------------------*\
   #SIDEBAR
@@ -331,13 +310,17 @@ main {
   gap: 15px;
 }
 
+/*-----------------------------------*\
+  #Logo
+\*-----------------------------------*/
+
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
 }
 
 .info-content .name {
-  color: var(--white-2);
+  color: #f2f2f2;
   font-size: var(--fs-3);
   font-weight: var(--fw-500);
   letter-spacing: -0.25px;
@@ -423,7 +406,7 @@ main {
 }
 
 .contact-info :is(.contact-link, time, address) {
-  color: var(--white-2);
+  color: #f2f2f2;
   font-size: var(--fs-7);
 }
 
@@ -446,10 +429,6 @@ main {
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
-
-
-
-
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -459,7 +438,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
+  background: hsl(241.46deg 32.8% 24.51%);
   backdrop-filter: blur(10px);
   border: 1px solid var(--jet);
   border-radius: 12px 12px 0 0;
@@ -487,10 +466,6 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
-
-
-
-
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -507,10 +482,7 @@ main {
 .about-text p { margin-bottom: 15px; }
 
 
-
-/**
- * #service 
- */
+/*** #service */
 
 .service { margin-bottom: 35px; }
 
@@ -757,9 +729,6 @@ main {
 .clients-item img:hover { filter: grayscale(0); }
 
 
-
-
-
 /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
@@ -866,8 +835,6 @@ main {
   height: 100%;
   border-radius: inherit;
 }
-
-
 
 
 

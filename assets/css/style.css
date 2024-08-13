@@ -694,9 +694,8 @@ main {
 }
 
 
-/**
- * #clients 
- */
+/*** #clients */
+
 
 .clients { margin-bottom: 15px; }
 
@@ -728,6 +727,13 @@ main {
 
 .clients-item img:hover { filter: grayscale(0); }
 
+.download-link {
+  color: #f2f2f2; /* Puedes cambiar estos colores si lo deseas */
+}
+
+.download-link:hover {
+  color: #fe25ae; 
+} 
 
 /*-----------------------------------*\
   #RESUME
@@ -1854,10 +1860,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-	 * RESUME
-	 */
+  /*** RESUME */
 
   .timeline-text { max-width: 700px; }
+  
   
 }

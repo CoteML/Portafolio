@@ -29,13 +29,13 @@
   ), #1d1c38;
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
+    hsl(322, 99%, 57%), 
+    hsl(322, 99%, 57%)
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
+    #2b2a53, 
+    #2b2a53
   ), hsl(240, 2%, 13%);
    /* linea que hago */
   --border-gradient-onyx: linear-gradient(
@@ -1595,9 +1595,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * CONTACT
-   */
+  /** INFORMACIÓN */
 
   .input-wrapper { grid-template-columns: 1fr 1fr; }
 
@@ -1605,16 +1603,32 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: max-content;
     margin-left: auto;
   }
+
+  /** Información */
+
+  /** Link Email */
+  .contact-link-1 {
+    color: #f2f2f2; 
+    text-decoration: none; 
+  }
+  .contact-link-1:hover {
+    color: #fe25ae; 
+  }
+
+    /** Link CV */
+  .download-link {
+    color: #f2f2f2; 
+    text-decoration: none; 
+  }
+  
+  .download-link:hover {
+    color: #fe25ae; 
+  }
   
 }
 
 
-
-
-
-/**
- * responsive larger than 1024px screen
- */
+/*** responsive larger than 1024px screen */
 
 @media (min-width: 1024px) {
 
@@ -1845,5 +1859,5 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
-
+  
 }

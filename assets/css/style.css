@@ -418,13 +418,13 @@ main {
   padding-left: 7px;
 }
 
-.social-item2 .social-link {
+.social-item2 .social-link2 {
   color: var(--light-gray-70);
   font-size: 18px;
 }
 
 
-.social-item2 .social-link:hover { color: var(--light-gray2); }
+.social-item2 .social-link2:hover { color: var(--light-gray2); }
 
 /*-----------------------------------*\
   #NAVBAR

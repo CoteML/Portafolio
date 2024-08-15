@@ -900,7 +900,7 @@ main {
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+.select-item button:hover { --eerie-black-2:hsl(322, 99%, 57%); }
 
 .project-list {
   display: grid;

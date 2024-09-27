@@ -12,129 +12,181 @@
 
   <!--- custom css link-->
   <link rel="stylesheet" href="./assets/css/style.css">
+  
 
   <!--- google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
   rel="stylesheet">
+
+  <style>
+@media(min-width: 768px) {
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+</style>
 </head>
 
 <body>
   <!--- #MAIN-->
   <main>
+    
     <!--- #SIDEBAR-->
     
     <aside class="sidebar" data-sidebar>
 
-        <div class="sidebar-info">
+      <div class="sidebar-info">
 
-            <figure class="avatar-box">
-              <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
-            </figure>
-    
-            <div class="info-content">
-              <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
-    
-              <p class="title">Diseñadora de Interacción Digital</p>
+        <figure class="avatar-box">
+          <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
+
+          <p class="title">Diseñadora de Interacción Digital</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar Contacto</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-    
-        
-      
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
             </div>
-      
-            <div class="sidebar-info_more">
-      
-              <div class="separator"></div>
-      
-              <ul class="contacts-list">
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="mail-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Email</p>
-      
-                    <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Cumpleaños</p>
-      
-                    <time datetime="2000-06-23">23 Junio, 2000</time>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="location-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Ubicación</p>
-      
-                    <address>Santiago, Chile</address>
-                  </div>
-                </li>
-              </ul>
-      
-              <div class="separator"></div>
-      
-              <ul class="social-list">
-      
-                <li class="social-item2">
-                  <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://x.com/Cote_mendozal" class="social-link2">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-                </li>
-              </ul>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
             </div>
-          
-    
+
+            <div class="contact-info">
+              <p class="contact-title">Cumpleaños</p>
+
+              <time datetime="2000-06-23">23 Junio, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Ubicación</p>
+
+              <address>Santiago, Chile</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item2">
+            <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://x.com/Cote_mendozal" class="social-link2">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
 
     <!--- #main-content-->
     <div class="main-content">
 
-
-      <!--- #SOBRE MÍ-->
-
-      <article class="about active" data-page="portafolio">
+      <article class="portfolio  active" data-page="portafolio">
         <header>
           <h2 class="h2 article-title">Portafolio</h2>
-        </header>
-
+          
         <section class="projects">
+          
 
-            <section class="about-text">
-                <p>
-                  web rimas
-                </p>
+            <ul class="project-list">
               
+              <h3 class="h3 service-title">Rimas 2022</h3>      
+             
+            </header>
+           
+
+              <li class="project-item  active" data-filter-item data-category="aplicación móvil">
+                <a href="">
+                  
+                </a>
+                
+              </li>
+              
+              <li class="project-item  active" data-filter-item data-category="página web">
+                <a href="">
+                  
+                </a>
+                
+              </li>
+              
+              </ul>
+              
+            <section class="about-text">
+             
+              
+              
+                <p>Trabajo para el ramo Desarrollo Web</p>
+                <br>
+                <p><strong>Profesor:</strong> Nicolás Zakrzewicz </p>
+
+                  
+                 <p><strong>Descripción del encargo: </strong> Crear una propuesta de diseño, que disponga de un e-commerce para la venta o compra de un servicio a través de internet, ya sea, de ropa, productos, festivales, etc. Incorporar el tema escogido aplicándolo a wordpress, logrando un diseño consistente, funcional, jerarquizado y responsivo tanto para desktop, como para mobile.
+                 </p> 
+                 <h1>
+                  Propuesta
+            </h1>
+                  <br>
+                  <p>Para el desarrollo de la página web de Rimas Entertainment, se planteó una propuesta creativa, con herramientas de diseño web como <strong>Illustrator </strong> y <strong>Visual Studio</strong>. Luego, se integró <strong>WordPress</strong> para dar vida al sitio. La propuesta fue pensada para una discográfica con sede en Miami, especializada en música urbana y fundada en 2014. Entre sus artistas destacados se encuentran Bad Bunny, Mora, Lyanno y Eladio Carrión.
+                  </p>
+                  <p>Lo que hace única a esta página es el acceso a información exclusiva de tus artistas favoritos: desde su trayectoria y álbumes recientes, hasta la historia detrás de cada canción. Además, los usuarios pueden ver los próximos conciertos, comprar boletos directamente, escuchar música y disfrutar de previews, creando una conexión más cercana con los artistas.</p>
+                  <p>Para esta propuesta, se investigó a fondo la compañía, respetando su sistema de diseño y adaptándolo al formato web, creando así una experiencia única y personalizada para los fans.</p>
+                
+
+                <img src="ruta-de-tu-imagen.jpg" alt="Prototipo de Drop Aid">
+                 
               </section>
+            
               <a href="index.html">
                 <button id="back-button">Regresar</button>
               </a>
@@ -142,15 +194,14 @@
           </section>
                 
         </article>
-     
-    <!--- custom js link -->
-  <script src="./assets/js/script.js"></script>
+      </div>
 
-  <!--- ionicon link-->
+    </main>
+    <!--- custom js link -->
+    <script src="./assets/js/script.js"></script>
+     <!--- ionicon link-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-</body>
-
-</html>
+  
+  </body>
+  </html>

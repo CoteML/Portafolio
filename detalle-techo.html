@@ -12,127 +12,180 @@
 
   <!--- custom css link-->
   <link rel="stylesheet" href="./assets/css/style.css">
+  
 
   <!--- google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
   rel="stylesheet">
+
+  <style>
+@media(min-width: 768px) {
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+</style>
 </head>
 
 <body>
   <!--- #MAIN-->
   <main>
+    
     <!--- #SIDEBAR-->
     
     <aside class="sidebar" data-sidebar>
 
-        <div class="sidebar-info">
+      <div class="sidebar-info">
 
-            <figure class="avatar-box">
-              <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
-            </figure>
-    
-            <div class="info-content">
-              <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
-    
-              <p class="title">Diseñadora de Interacción Digital</p>
+        <figure class="avatar-box">
+          <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
+
+          <p class="title">Diseñadora de Interacción Digital</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar Contacto</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-  
-      
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
             </div>
-      
-            <div class="sidebar-info_more">
-      
-              <div class="separator"></div>
-      
-              <ul class="contacts-list">
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="mail-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Email</p>
-      
-                    <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Cumpleaños</p>
-      
-                    <time datetime="2000-06-23">23 Junio, 2000</time>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="location-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Ubicación</p>
-      
-                    <address>Santiago, Chile</address>
-                  </div>
-                </li>
-              </ul>
-      
-              <div class="separator"></div>
-      
-              <ul class="social-list">
-      
-                <li class="social-item2">
-                  <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://x.com/Cote_mendozal" class="social-link2">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-                </li>
-              </ul>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
             </div>
-          
-    
+
+            <div class="contact-info">
+              <p class="contact-title">Cumpleaños</p>
+
+              <time datetime="2000-06-23">23 Junio, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Ubicación</p>
+
+              <address>Santiago, Chile</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item2">
+            <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://x.com/Cote_mendozal" class="social-link2">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
 
     <!--- #main-content-->
     <div class="main-content">
 
-      <!--- #SOBRE MÍ-->
-
-      <article class="about active" data-page="portafolio">
+      <article class="portfolio  active" data-page="portafolio">
         <header>
           <h2 class="h2 article-title">Portafolio</h2>
-        </header>
-
+          
         <section class="projects">
+          
 
+            <ul class="project-list">
+              
+              <h3 class="h3 service-title">Programa RED TECHO-Chile 2022</h3>      
+             
+            </header>
+           
 
+              <li class="project-item  active" data-filter-item data-category="aplicación móvil">
+                <a href="">
+                  
+                </a>
+                
+              </li>
+              
+              <li class="project-item  active" data-filter-item data-category="página web">
+                <a href="">
+                  
+                </a>
+                
+              </li>
+              
+              </ul>
+              
             <section class="about-text">
-                <p>
-                  techo
-            </p>
+              
+              
+              
+                <p>Trabajo para el ramo Taller Diseño de Interfaces</p>
+                <br>
+                <p><strong>Profesor:</strong> José Luis Santorcuato </p>
+
+                <p><strong>Equipo:</strong> Conjunto con todo el Taller </p>
+
+                 <p><strong>Descripción del encargo: </strong> Desarrollo de aproximaciones de una plataforma que pueda solucionar la comunicación, mejorando el canal entre voluntariado y los funcionarios de la Fundación TECHO-Chile que permita ser más eficientes para una correcta intervención. A su vez, detectar información relevante para que la Fundación pueda desarrollar una solución en torno a la problemática expuesta. 
+                 </p> 
+                 <h1>
+                  Propuesta
+            </h1>
+                  <br>
+                  <p>Este proyecto se trató sobre la creación de una aplicación móvil para la fundación "Un Techo para Chile", teniendo la oportunidad de conversar cara a cara con varios coordinadores y voluntarios, donde nos contaron del funcionamiento interno que tenían, los cargos asociados y las actividades; pudiendo así realizar una <strong>entrevista</strong> para conocer más a fondo acerca de la fundación. De esta manera, encontrar una solución a la principal problemática que ellos nos plantearon: la comunicación y organización entre voluntario y funcionario.
+                  </p>
+                  <p> utilizando la herramienta <strong>Figma</strong> y sobre todo, siguiendo y respetando el <strong>sistema de diseño</strong>, la categorización que ya tenian de los datos, logrando así, crear una identidad a la marca y una nueva forma de organizar el sistema interno de la fundación Techo. </p>
+
+                <img src="ruta-de-tu-imagen.jpg" alt="Prototipo de Drop Aid">
+                 
               </section>
+            
               <a href="index.html">
                 <button id="back-button">Regresar</button>
               </a>
@@ -140,15 +193,14 @@
           </section>
                 
         </article>
-     
-    <!--- custom js link -->
-  <script src="./assets/js/script.js"></script>
+      </div>
 
-  <!--- ionicon link-->
+    </main>
+    <!--- custom js link -->
+    <script src="./assets/js/script.js"></script>
+     <!--- ionicon link-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-</body>
-
-</html>
+  
+  </body>
+  </html>

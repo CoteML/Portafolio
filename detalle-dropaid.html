@@ -12,166 +12,252 @@
 
   <!--- custom css link-->
   <link rel="stylesheet" href="./assets/css/style.css">
+  
 
   <!--- google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
   rel="stylesheet">
+
+  <style> 
+@media(min-width: 768px) {
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+</style>
 </head>
 
 <body>
   <!--- #MAIN-->
   <main>
+    
     <!--- #SIDEBAR-->
     
     <aside class="sidebar" data-sidebar>
 
-        <div class="sidebar-info">
+      <div class="sidebar-info">
 
-            <figure class="avatar-box">
-              <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
-            </figure>
-    
-            <div class="info-content">
-              <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
-    
-              <p class="title">Diseñadora de Interacción Digital</p>
+        <figure class="avatar-box">
+          <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
+
+          <p class="title">Diseñadora de Interacción Digital</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar Contacto</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-    
-      
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
             </div>
-      
-            <div class="sidebar-info_more">
-      
-              <div class="separator"></div>
-      
-              <ul class="contacts-list">
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="mail-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Email</p>
-      
-                    <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Cumpleaños</p>
-      
-                    <time datetime="2000-06-23">23 Junio, 2000</time>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="location-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Ubicación</p>
-      
-                    <address>Santiago, Chile</address>
-                  </div>
-                </li>
-              </ul>
-      
-              <div class="separator"></div>
-      
-              <ul class="social-list">
-      
-                <li class="social-item2">
-                  <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://x.com/Cote_mendozal" class="social-link2">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-                </li>
-              </ul>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
             </div>
-          
-    
+
+            <div class="contact-info">
+              <p class="contact-title">Cumpleaños</p>
+
+              <time datetime="2000-06-23">23 Junio, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Ubicación</p>
+
+              <address>Santiago, Chile</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item2">
+            <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://x.com/Cote_mendozal" class="social-link2">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
 
     <!--- #main-content-->
     <div class="main-content">
 
-      <!--- #SOBRE MÍ-->
-
-      <article class="about active" data-page="portafolio">
+      <article class="portfolio  active" data-page="portafolio">
         <header>
           <h2 class="h2 article-title">Portafolio</h2>
-        </header>
-
+          
         <section class="projects">
+          
 
-            <ul class="filter-list">
-  
-              <li class="filter-item">
-                <button class="active" data-filter-btn>Todo</button>
-              </li>
-  
-              <li class="filter-item">
-                <button data-filter-btn>Página Web</button>
-              </li>
-  
-              <li class="filter-item">
-                <button data-filter-btn>Aplicación Móvil</button>
-              </li>
-  
-              <li class="filter-item">
-                <button data-filter-btn>Producto Físico</button>
-              </li>
-  
-              <li class="filter-item">
-                <button data-filter-btn>Realidad Virtual</button>
-              </li>
-  
-            </ul>
-            <section class="about-text">
-                <p>
-                  drop
-                </p>
+            <ul class="project-list">
               
+              <h3 class="h3 service-title">Drop Aid 2022</h3>      
+             
+            </header>
+           
+
+              <li class="project-item  active" data-filter-item data-category="aplicación móvil">
+                <a href="">
+                  
+                </a>
+                
+              </li>
+              
+              <li class="project-item  active" data-filter-item data-category="página web">
+                <a href="">
+                  
+                </a>
+                
+              </li>
+              
+              </ul>
+              
+            <section class="about-text">
+             
+              
+              
+                <p>Trabajo para el ramo Taller de Interacción III</p>
+                <br>
+                <p><strong>Profesores:</strong> Germán Espinoza y Mauricio Reyes </p>
+
+                <p><strong>Equipo:</strong> Mariajosé Mendoza y Constanza González </p>
+                  
+                 <p><strong>Descripción del encargo: </strong> Detectar un problema oportunidad, creando una propuesta de valor utilizando design thinking, indicando una hipótesis tecnológica y de mercado (usuario). Definiendo detalles tecnológicos, con un desarrollo de prototipo funcional de calidad y pertinencia, apoyado de una memoria visual descriptiva de cómo fue el proceso de diseño 3D, 2D y códigos empleados.</p> 
+                 
+                 <h1>
+                  Reconocimiento
+            </h1>
+                  <br>
+                  <p>Con este proyecto participamos en el <strong>Concurso Impacto Emprendedor 2022</strong>
+                    quedando seleccionado entre los <strong>25 mejores</strong> de un total de 500 participantes.
+                  </p>
+                 
+                 
+                 <h1>
+                  Proceso de Diseño
+            </h1>
+                  <br>
+                  <p>El primer paso fue detectar una oportunidad o necesidad no 
+                    resuelta dentro del mercado, utilizando la metodología 
+                    <strong>Design Thinking.</strong> Este enfoque nos permitió 
+                    profundizar en la experiencia del usuario y generar una 
+                    propuesta de valor única, orientada a solucionar un problema 
+                    real.
+                  </p>
+                  <p>A partir de este análisis, formulamos una hipótesis tecnológica 
+                    y de mercado basada en el comportamiento y necesidades del usuario. 
+                    Nos preguntamos: <strong>¿Cómo podríamos usar la tecnología para mejorar esta experiencia y satisfacer estas demandas de manera eficiente? </strong></p>
+
+                    <h1>
+                      Problema detectado
+                </h1>
+                      <br>
+                      <p>El transporte público en Santiago presenta una creciente preocupación para jóvenes universitarias que enfrentan situaciones de acoso. 
+                      </p>
+                      <p>Estas situaciones generan ansiedad y vulnerabilidad, lo que lleva a la búsqueda de soluciones que mejoren la seguridad y la respuesta rápida ante una situación de peligro.</p>
+
+
+                      <h1>
+                        Propuesta
+                  </h1>
+                        <br>
+                        <p>Drop Aid es un sistema de seguridad colaborativa diseñado para mujeres que viajan solas. El proyecto ofrece una pulsera y un anillo inteligentes que, al ser activados, emiten una vibración y envían una señal a una aplicación móvil. La app notifica a otras usuarias cercanas y a los contactos de emergencia predefinidos. 
+                        </p>
+                        <p> Con este sistema, las jóvenes pueden alertar y ser asistidas rápidamente, creando una red de apoyo.</p>  
+
+                        
+                      <h1>
+                        Prototipado en 3D y Diseño
+                  </h1>
+                        <br>
+                        <p>Utilizamos <strong>Fusion 360 </strong>para diseñar el render de la pulsera, que posteriormente fue impresa en 3D para lograr un prototipo funcional. Este proceso permitió visualizar cómo sería el producto final y hacer ajustes de ergonomía y estilo. 
+                        </p>
+
+                <img src="ruta-de-tu-imagen.jpg" alt="Prototipo de Drop Aid">
+                        
+                <h1>
+                  Desarrollo Tecnológico
+            </h1>
+                  <br>
+                  <p>Implementamos un mini motor de vibración y un módulo ESP8266, que fueron integrados con <strong>Arduino</strong> para crear la funcionalidad principal del dispositivo. La pulsera vibra al ser activada y envía la señal de alerta mediante el sistema conectado. 
+                  </p>
+
+                  <h1>
+                    Conectividad
+              </h1>
+                    <br>
+                    <p>En este proyecto, <strong>Blynk</strong> y <strong>IFTTT</strong> fueron esenciales para crear el sistema de notificaciones. Blynk permitió conectar el módulo ESP8266 con el botón de la pulsera, enviando una señal cuando se activaba. IFTTT automatizó las respuestas, como enviar alertas a los contactos de emergencia, facilitando una solución rápida y funcional para la notificación en situaciones de acoso.
+
+                    </p>
+
+                 
               </section>
             
               <a href="index.html">
                 <button id="back-button">Regresar</button>
               </a>
+  
           </section>
                 
         </article>
-     
-    <!--- custom js link -->
-  <script src="./assets/js/script.js"></script>
+      </div>
 
-  <!--- ionicon link-->
+    </main>
+    <!--- custom js link -->
+    <script src="./assets/js/script.js"></script>
+     <!--- ionicon link-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-</body>
-
-</html>
+  
+  </body>
+  </html>

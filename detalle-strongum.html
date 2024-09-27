@@ -12,126 +12,199 @@
 
   <!--- custom css link-->
   <link rel="stylesheet" href="./assets/css/style.css">
+  
 
   <!--- google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
   rel="stylesheet">
+
+  <style> 
+@media(min-width: 768px) {
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+</style>
 </head>
 
 <body>
   <!--- #MAIN-->
   <main>
+    
     <!--- #SIDEBAR-->
     
     <aside class="sidebar" data-sidebar>
 
-        <div class="sidebar-info">
+      <div class="sidebar-info">
 
-            <figure class="avatar-box">
-              <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
-            </figure>
-    
-            <div class="info-content">
-              <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
-    
-              <p class="title">Diseñadora de Interacción Digital</p>
+        <figure class="avatar-box">
+          <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
+
+          <p class="title">Diseñadora de Interacción Digital</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar Contacto</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-    
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
             </div>
-      
-            <div class="sidebar-info_more">
-      
-              <div class="separator"></div>
-      
-              <ul class="contacts-list">
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="mail-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Email</p>
-      
-                    <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Cumpleaños</p>
-      
-                    <time datetime="2000-06-23">23 Junio, 2000</time>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="location-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Ubicación</p>
-      
-                    <address>Santiago, Chile</address>
-                  </div>
-                </li>
-              </ul>
-      
-              <div class="separator"></div>
-      
-              <ul class="social-list">
-      
-                <li class="social-item2">
-                  <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://x.com/Cote_mendozal" class="social-link2">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-                </li>
-              </ul>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
             </div>
-          
-    
+
+            <div class="contact-info">
+              <p class="contact-title">Cumpleaños</p>
+
+              <time datetime="2000-06-23">23 Junio, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Ubicación</p>
+
+              <address>Santiago, Chile</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item2">
+            <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://x.com/Cote_mendozal" class="social-link2">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
 
     <!--- #main-content-->
     <div class="main-content">
 
-
-      <!--- #SOBRE MÍ-->
-
-      <article class="about active" data-page="portafolio">
+      <article class="portfolio  active" data-page="portafolio">
         <header>
           <h2 class="h2 article-title">Portafolio</h2>
-        </header>
-
+          
         <section class="projects">
+          
 
-            <section class="about-text">
-                <p>
-                 chicle
-                 </p>
+            <ul class="project-list">
+              
+              <h3 class="h3 service-title">Strongum 2022 - 2023</h3>      
+             
+            </header>
+           
+
+              <li class="project-item  active" data-filter-item data-category="aplicación móvil">
+                <a href="">
+                  
+                </a>
                 
+              </li>
+              
+              <li class="project-item  active" data-filter-item data-category="página web">
+                <a href="">
+                  
+                </a>
+                
+              </li>
+              
+              </ul>
+              
+            <section class="about-text">
+             
+              
+              
+                <p>Trabajo para el ramo Taller Integrado</p>
+                <br>
+                <p><strong>Profesores:</strong> Enzo Anziani y Margarita Talep</p>
+
+                <p><strong>Equipo:</strong> Mariajosé Mendoza, Bernardita Jiménez y Emilia Moure </p>
+                  
+                 <p><strong>Descripción del encargo: </strong> Desarrollar productos cotidianos que sean amigables con el medio ambiente. En lugar de seguir las tendencias convencionales, Strongum explora el biodiseño, una disciplina que combina la biotecnología con la sostenibilidad para crear soluciones innovadoras.</p> 
+                 
+                 <h1>
+                  Reconocimiento
+            </h1>
+                  <br>
+                  <p>Con este proyecto participamos en <strong>Biodesign Challenge 2023</strong>
+                    ganando el premio <strong>COMMUNITY CHOICE WINNER</strong> en Manhattan, Nueva York.
+                  </p>
+                 
+                 
+                 <h1>
+                  Proceso de Diseño
+            </h1>
+                  <br>
+                  <p>Strongum es un chicle biodegradable y rico en proteínas, elaborado a partir de ingredientes de origen vegetal, como el Lupinus polyphyllus y el gluten. Este enfoque no solo plantea una solución para <strong>reducir la contaminación plástica</strong> generada por los chicles convencionales, sino que también ofrece beneficios nutricionales para atletas y personas activas.
+                  </p>
+                  <p>El proceso de desarrollo incluyó <strong>más de 60 pruebas</strong>, explorando materiales para obtener la consistencia perfecta. En lugar de utilizar aceite de coco, se optó por la glicerina, que además de ser hidratante, ofrece una estructura más saludable. El gluten fue incorporado por sus propiedades elásticas, y la proteína de lupinus se añadió por su alto valor nutricional.</p>
+                      <h1>
+                        Propuesta
+                  </h1>
+                        <br>
+                        <p>El resultado es un chicle que, además de degradarse 
+                          rápidamente bajo exposición a rayos UV, 
+                          libera proteínas durante su consumo, proporcionando 
+                          una fuente inmediata y accesible de macronutrientes.
+                          Con un ciclo completo de <strong>producción sustentable</strong>, 
+                          desde el cultivo del lupinus hasta la fabricación del producto final.</p> 
+                         <p>Strongum es una alternativa ética, saludable y beneficiosa tanto para el consumidor como para el entorno.
+                        </p>
+
+                <img src="ruta-de-tu-imagen.jpg" alt="Prototipo de Drop Aid">
+              
               </section>
             
               <a href="index.html">
@@ -141,15 +214,14 @@
           </section>
                 
         </article>
-     
-    <!--- custom js link -->
-  <script src="./assets/js/script.js"></script>
+      </div>
 
-  <!--- ionicon link-->
+    </main>
+    <!--- custom js link -->
+    <script src="./assets/js/script.js"></script>
+     <!--- ionicon link-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-</body>
-
-</html>
+  
+  </body>
+  </html>

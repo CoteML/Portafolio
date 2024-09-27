@@ -12,129 +12,183 @@
 
   <!--- custom css link-->
   <link rel="stylesheet" href="./assets/css/style.css">
+  
 
   <!--- google font link-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
   rel="stylesheet">
+
+  <style>
+@media(min-width: 768px) {
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+</style>
 </head>
 
 <body>
   <!--- #MAIN-->
   <main>
+    
     <!--- #SIDEBAR-->
     
     <aside class="sidebar" data-sidebar>
 
-        <div class="sidebar-info">
+      <div class="sidebar-info">
 
-            <figure class="avatar-box">
-              <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
-            </figure>
-    
-            <div class="info-content">
-              <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
-    
-              <p class="title">Diseñadora de Interacción Digital</p>
+        <figure class="avatar-box">
+          <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
+
+          <p class="title">Diseñadora de Interacción Digital</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar Contacto</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-    
-           
-      
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
             </div>
-      
-            <div class="sidebar-info_more">
-      
-              <div class="separator"></div>
-      
-              <ul class="contacts-list">
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="mail-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Email</p>
-      
-                    <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="calendar-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Cumpleaños</p>
-      
-                    <time datetime="2000-06-23">23 Junio, 2000</time>
-                  </div>
-      
-                </li>
-      
-                <li class="contact-item">
-      
-                  <div class="icon-box">
-                    <ion-icon name="location-outline"></ion-icon>
-                  </div>
-      
-                  <div class="contact-info">
-                    <p class="contact-title">Ubicación</p>
-      
-                    <address>Santiago, Chile</address>
-                  </div>
-                </li>
-              </ul>
-      
-              <div class="separator"></div>
-      
-              <ul class="social-list">
-      
-                <li class="social-item2">
-                  <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </a>
-                </li>
-                <li class="social-item2">
-                  <a href="https://x.com/Cote_mendozal" class="social-link2">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </a>
-                </li>
-              </ul>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
             </div>
-          
-    
+
+            <div class="contact-info">
+              <p class="contact-title">Cumpleaños</p>
+
+              <time datetime="2000-06-23">23 Junio, 2000</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Ubicación</p>
+
+              <address>Santiago, Chile</address>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item2">
+            <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item2">
+            <a href="https://x.com/Cote_mendozal" class="social-link2">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
     </aside>
 
     <!--- #main-content-->
     <div class="main-content">
 
-
-      <!--- #SOBRE MÍ-->
-
-      <article class="about active" data-page="portafolio">
+      <article class="portfolio  active" data-page="portafolio">
         <header>
           <h2 class="h2 article-title">Portafolio</h2>
-        </header>
-
-        <section class="projects">
-
           
+        <section class="projects">
+          
+
+            <ul class="project-list">
+              
+              <h3 class="h3 service-title">Let it up Motion 2021</h3>      
+             
+            </header>
+           
+
+              <li class="project-item  active" data-filter-item data-category="aplicación móvil">
+                <a href="">
+                  
+                </a>
+                
+              </li>
+              
+              <li class="project-item  active" data-filter-item data-category="página web">
+                <a href="">
+                  
+                </a>
+                
+              </li>
+              
+              </ul>
+              
             <section class="about-text">
-                <p>
-                  explicación let it up
-                </p>
-               
+              
+              
+              
+                <p>Trabajo para el ramo Taller de Interacción IV </p>
+                <br>
+                <p><strong>Profesor:</strong> Germán Espinoza y Mauricio Reyes </p>
+
+                <p><strong>Equipo:</strong> Mariajosé Mendoza y Constanza González </p>
+
+                 <p><strong>Descripción del encargo: </strong> Elaborar un concepto de diseño ficción, basado en la investigación e innovación, a través de medios digitales interactivos, como <strong>tecnología en RV</strong>, a través de la construcción de un escenario contextualizado según la propuesta de los 100 trabajos del futuro. Permitiéndonos materializar con antelación mediante prototipado en <strong>realidad virtual</strong>, una visualización de volúmenes 3D. 
+                 </p> 
+                 <h1>
+                  Propuesta
+            </h1>
+                  <br>
+                  <p>El proyecto consiste en crear un espacio de relajación para el usuario, adulto mayor, que se encuentra hospitalizado sin tener que salir del hospital o clínica por medio de la <strong>realidad virtual</strong>, con la implementación de <strong>Oculus Quest 2</strong> utilizando <strong>UNITY</strong>. 
+                  </p>
+                  <h1>
+                   Escenario
+              </h1>
+              <br>
+                  <p> El escenario está construido de 4 partes: La sala de exposición (1) con una pequeña maqueta del proyecto y la foto del usuario. Luego ingresa a la "sala de recuerdo", donde comienza la interacción; la radio, (2) que podrá activar con el índice de la mano izquierda que contiene el trigger para activar los dos botones que se encuentran en el proyecto. </p>
+
+                  <p>  El primer botón, activa música de los 60´s, luego podrá interactuar con el segundo botón donde visualizará una proyección de videos (3) con recuerdos familiares, artistas favoritos, moda y la visita del Papa Juan Pablo II, ayudando a recordar lo momentos históricos de la época en la que vivió, terminando con un jardín (4) donde entrará en contacto con la naturaleza teniendo música ambiental como complemento.</p>
+                <img src="ruta-de-tu-imagen.jpg" alt="Prototipo de Drop Aid">
+                 
               </section>
             
               <a href="index.html">
@@ -144,15 +198,14 @@
           </section>
                 
         </article>
-     
-    <!--- custom js link -->
-  <script src="./assets/js/script.js"></script>
+      </div>
 
-  <!--- ionicon link-->
+    </main>
+    <!--- custom js link -->
+    <script src="./assets/js/script.js"></script>
+     <!--- ionicon link-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-</body>
-
-</html>
+  
+  </body>
+  </html>

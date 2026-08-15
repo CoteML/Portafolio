@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+
+  <title>Trabajos | Mariajosé Mendoza</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/proyectos.css">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER — "Trabajos" marcado como active
+===================================================== -->
+<header id="site-header" class="site-header transparent">
+
+  <a href="index.html" class="header-logo">MML.</a>
+
+  <nav class="header-nav">
+    <a href="index.html">Sobre mí</a>
+    <a href="experiencia.html">Experiencia</a>
+    <a href="proyectos.html" class="active">Trabajos</a>
+  </nav>
+
+  <a
+    href="assets/pdf/CV-Mariajose-Mendoza.pdf"
+    class="header-cta"
+    download
+  >
+    Descargar CV
+  </a>
+
+</header>
+
+<!-- Navegación mobile -->
+<nav class="mobile-nav">
+  <a href="index.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
+    </svg>
+    Sobre mí
+  </a>
+  <a href="experiencia.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="2" width="16" height="20" rx="2"/>
+      <line x1="8" y1="8" x2="16" y2="8"/>
+      <line x1="8" y1="12" x2="16" y2="12"/>
+      <line x1="8" y1="16" x2="12" y2="16"/>
+    </svg>
+    Trayectoria
+  </a>
+  <a href="proyectos.html" class="active">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="7" width="20" height="14" rx="2"/>
+      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+    </svg>
+    Trabajos
+  </a>
+</nav>
+
+
+<!-- =====================================================
+     CABECERA + FILTROS
+     Tabs desktop / Select dropdown mobile
+===================================================== -->
+<section class="work-header">
+
+  <h1>Trabajos.</h1>
+
+  <!-- Filtros desktop -->
+  <div class="work-tabs">
+    <button class="work-tab active" data-filter="Todos">Todos</button>
+        <button class="work-tab" data-filter="Análisis UX">Análisis UX</button>
+    <button class="work-tab" data-filter="Diseño Web">Diseño Web</button>
+        <button class="work-tab" data-filter="Aplicación Móvil">Aplicación Móvil</button>
+    <button class="work-tab" data-filter="Piezas Gráficas">Piezas Gráficas</button>
+  </div>
+
+  <!-- Filtro mobile (select nativo) -->
+  <div class="work-select-wrap">
+    <select class="work-select">
+      <option value="Todos">Todos</option>
+      <option value="Análisis UX">Análisis UX</option>
+      <option value="Diseño Web">Diseño Web</option>
+      <option value="Aplicación Móvil">Aplicación Móvil</option>
+      <option value="Piezas Gráficas">Piezas Gráficas</option>
+    </select>
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     GRID DE PROYECTOS
+     Las tarjetas se inyectan dinámicamente desde
+     js/proyectos.js + js/data/proyectos.js
+===================================================== -->
+<section class="projects-grid" id="projects-grid">
+
+  <!-- Las tarjetas se generan con JS -->
+
+  <!-- Fallback estático (por si JS no carga) -->
+  <noscript>
+
+    <!-- Finova App
+    <article class="project-card" data-category="UX/UI">
+      <a href="proyecto-finova.html">
+        <div class="project-thumb">
+          <img src="https://images.unsplash.com/photo-1776702701448-36220108225d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Finova App">
+        </div>
+        <div class="project-body">
+          <div class="project-meta">
+            <div>
+              <h3 class="project-title">Finova App</h3>
+              <p class="project-desc">Rediseño completo de experiencia bancaria móvil con enfoque en accesibilidad.</p>
+            </div>
+            <span class="project-year">2023</span>
+          </div>
+          <div class="project-cta">
+            <span>Ver proyecto</span>
+            <span class="arrow-icon">→</span>
+          </div>
+        </div>
+      </a>
+    </article>-->
+
+  </noscript>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer site-footer--navy">
+  <div class="footer-top">
+    <span class="footer-logo-text">MML.</span>
+    <a href="mailto:cote.mendozalp@gmail.com" class="footer-email-pill">
+      cote.mendozalp@gmail.com
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Mariajosé Mendoza Lopetegui</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <span class="footer-location">Santiago, Chile</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS: data primero, luego el generador y los filtros -->
+<script src="js/data/proyectos.js"></script>
+<script src="js/proyectos.js"></script>
+<script src="js/filtros.js"></script>
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+
+</body>
+</html>

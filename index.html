@@ -1,1511 +1,524 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mariajosé Mendoza Lopetegui - Portafolio</title>
-
-  <!--- favicon -->
-  <link rel="shortcut icon" href="./assets/images/Logo-Mj.ico" type="image/x-icon">
-
-  <!--- custom css link-->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-
-  <!--- google font link-->
+  <title>Mariajosé Mendoza Lopetegui | Diseñadora de Interacción Digital</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
-  rel="stylesheet"></head>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
 <body>
-  <!--- #MAIN-->
-  <main>
-    <!--- #SIDEBAR-->
-    <aside class="sidebar" data-sidebar>
 
-      <div class="sidebar-info">
+<!-- HEADER -->
+<header id="site-header" class="site-header transparent">
+  <a href="index.html" class="header-logo">MML.</a>
+  <nav class="header-nav">
+    <a href="index.html" class="active">Sobre mí</a>
+    <a href="experiencia.html">Experiencia</a>
+    <a href="proyectos.html">Trabajos</a>
+  </nav>
+  <a href="assets/pdf/CV-Mariajose-Mendoza.pdf" class="header-cta" download>Descargar CV</a>
+</header>
 
-        <figure class="avatar-box">
-          <img src="./assets/images/Logo-Mj.svg" alt="Mariajose Mendoza" width="80">
-        </figure>
+<nav class="mobile-nav">
+  <a href="index.html" class="active">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/></svg>
+    Sobre mí
+  </a>
+  <a href="experiencia.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+    Experiencia
+  </a>
+  <a href="proyectos.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+    Trabajos
+  </a>
+</nav>
 
-        <div class="info-content">
-          <h1 class="name" title="Mariajosé Mendoza">Mariajosé Mendoza</h1>
 
-          <p class="title">Diseñadora de Interacción Digital</p>
+<!-- =====================================================
+     HERO — nombre arrastrable con clamping
+===================================================== -->
+<section class="hero" id="hero-section">
+  <div class="hero-drag-area" id="hero-drag-area">
+    <div class="hero-name-drag figma-card" id="hero-name-card" data-label="FRAME: HERO">
+      <div class="hero-name">
+        <span>Mariajosé</span>
+        <span>Mendoza</span>
+        <span>Lopetegui</span>
+      </div>
+      <div class="fc-selection-border"></div>
+      <div class="fc-handle fc-h-tl"></div>
+      <div class="fc-handle fc-h-tr"></div>
+      <div class="fc-handle fc-h-bl"></div>
+      <div class="fc-handle fc-h-br"></div>
+    </div>
+  </div>
+  <p class="hero-subtitle">Diseñadora de Interacción Digital</p>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- =====================================================
+     SOBRE MÍ — texto a la izquierda + DraggableBoard a la derecha
+     Reemplaza las 2 secciones separadas del canvas unificado.
+     Sigue la misma estructura del código de referencia:
+     grid 2 columnas, texto izquierda, board interactivo derecha.
+===================================================== -->
+<section class="sobre-mi-section" id="sobre-mi">
+  <div class="sm-inner">
+
+    <!-- Columna izquierda: bio -->
+    <div class="sm-bio">
+      <p class="u-label">Sobre mí</p>
+      <h2 class="sm-heading">Sobre mí</h2>
+      <p class="sm-text">
+        Soy Diseñadora de Interacción Digital, estoy enfocada en diseño UX/UI,
+        investigación y conceptualización. Desarrollo soluciones que integran tecnología
+        e interacción humana en servicios, experiencias, productos interactivos,
+        páginas web y aplicaciones móviles.
+      </p>
+      <p class="sm-text">
+        Me destaco por mi autonomía y proactividad en el trabajo en equipo, creando
+        experiencias digitales intuitivas que mejoran la comunicación, siempre con un
+        enfoque centrado en el usuario.
+      </p>
+      <div class="fc-tags" style="margin-top:1.5rem;">
+        <span class="fc-tag">UX Research</span>
+        <span class="fc-tag">UI Design</span>
+        <span class="fc-tag">Interacción Digital</span>
+      </div>
+    </div>
+
+    <!-- Columna derecha: board de cards arrastrables -->
+    <div class="sm-board-wrapper">
+
+      <!-- Fila superior: hint + controles de zoom -->
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+
+        <div class="board-hint" id="board-hint">
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 3v18"/>
+          </svg>
+          Arrastra las cards para explorar
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Mostrar Contacto</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+        <!-- Controles de zoom (desktop) -->
+        <div class="zoom-controls" id="zoom-controls">
+          <button class="zoom-btn" id="zoom-out" title="Alejar">−</button>
+          <span class="zoom-level" id="zoom-level">100%</span>
+          <button class="zoom-btn" id="zoom-in"  title="Acercar">+</button>
+        </div>
 
       </div>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:marmendozalp@gmail.com" class="contact-link">marmendozalp@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Cumpleaños</p>
-
-              <time datetime="2000-06-23">23 Junio, 2000</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Ubicación</p>
-
-              <address>Santiago, Chile</address>
-            </div>
-          </li>
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item2">
-            <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui-709121250/" class="social-link2">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item2">
-            <a href="https://www.instagram.com/cote__m/?hl=es-la" class="social-link2">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item2">
-            <a href="https://x.com/Cote_mendozal" class="social-link2">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
-    <!--- #main-content-->
-    <div class="main-content">
-    <!--- #NAVBAR-->
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>Sobre Mí</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resumen</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portafolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Información</button>
-          </li>
-        </ul>
-      </nav>
-      <!--- #SOBRE MÍ-->
-
-      <article class="about  active" data-page="sobre mí">
-        <header>
-          <h2 class="h2 article-title">Sobre Mí</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Soy Diseñadora de Interacción Digital, busco crear experiencias digitales intuitivas e inclusivas. 
-            Me especializo en Diseño UX/UI, investigación y conceptualización, desarrollando soluciones que conectan tecnología 
-            e interacción humana, en el diseño de servicios, experiencias y productos interactivos.
-          </p>
-          <p>
-            Mi trayectoria en el campo del diseño ha sido impulsada en cómo la tecnología puede mejorar la comunicación, 
-            en comunidades desatendidas.
-          </p>
-          <p>
-            Mi enfoque es centrado en el usuario, asegurando que cada producto sea funcional y estéticamente agradable. 
-            Estoy comprometida a hacer una diferencia a través del diseño.
-          </p>
-        </section>
-        <!--- QUÉ HAGO...-->
-
-        <section class="service">
-          <h3 class="h3 service-title">Qué Hago...</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Diseño UX/UI</h4>
-
-                <p class="service-item-text">
-                  Creación de interfaces intuitivas y experiencias de usuario optimizadas para productos digitales y físicos.
-                </p>
-              </div>
-
-            </li>
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Diseño Web</h4>
-
-                <p class="service-item-text">
-                  Desarrollo de sitios web funcionales, enfocados en la usabilidad desde la conceptualización hasta el testeo.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Diseño Aplicaciones Móviles</h4>
-
-                <p class="service-item-text">
-                  Desarrollo de aplicaciones móviles funcionales,desde la idea inicial hasta el testeo.</p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design-thinking.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Metodologías de Investigación</h4>
-
-                <p class="service-item-text">
-                  Desarrollo de soluciones mediante Design Thinking.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-prototipo.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Prototipos Interactivos</h4>
-
-                <p class="service-item-text">
-                  Diseño y desarrollo de prototipos funcionales con Arduino, Unity y otras plataformas tecnológicas.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-3d-printing.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Modelado 3D y Fabricación</h4>
-
-                <p class="service-item-text">
-                  Diseño y creación de modelos 3D para impresión y fabricación de productos físicos.
-                </p>
-              </div>
-
-            </li>
-          </ul>
-        </section>
-        
-<!-- testimonials 
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-        <!- testimonials modal
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div> -->
-        
-        <!--clients 
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-          </ul>
-        </section>
-          -->
-
-      </article>
-    
-      <!--- #RESUME-->
-
-      <article class="resume" data-page="resumen">
-
-        <header>
-          <h2 class="h2 article-title">Resumen</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Educación</h3>
+      <!-- Recuadro fijo: el overflow:hidden mantiene el borde estático -->
+      <div class="sm-board" id="sm-board">
+
+        <!-- Canvas interno: es el que se escala/desplaza con el zoom -->
+        <!-- La grilla de puntos está aquí dentro para que también escale -->
+        <div class="board-canvas" id="board-canvas">
+
+          <!-- Card 1: Diseño UX/UI — navy -->
+          <div class="board-card board-card--navy" data-label="MI PERFIL" style="left:10px;top:10px;width:240px;">
+            <p class="bc-label">Diseño UX/UI</p>
+            <p class="bc-text">Transformo necesidades, comportamientos y objetivos en experiencias digitales intuitivas, accesibles y significativas para productos y servicios.</p>
+            <div class="bc-dots bc-dots--light"><div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div></div>
           </div>
 
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Universidad del Desarrollo</h4>
-
-              <span>2019 — 2023</span>
-
-              <p class="timeline-text">
-                Título Profesional de Diseñadora con mención en Diseño de Interacción Digital
-              </p>
-              <p class="timeline-text">
-               San Carlos de Apoquindo, Santiago Chile 
-              </p>
-
-            </li>
-
-             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Universidad del Desarrollo</h4>
-
-              <span>2020 - 2023</span>
-
-              <p class="timeline-text">
-                Certificado de Formación en Ciencia, Tecnología e Innovación
-              </p>
-              <p class="timeline-text">
-               San Carlos de Apoquindo, Santiago Chile 
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Colegio Everest</h4>
-
-              <span>2005 - 2018</span>
-              <p class="timeline-text">
-                Lo Barnechea, Santiago Chile
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experiencia Laboral</h3>
+          <!-- Card 2: Investigación UX — blanco -->
+          <div class="board-card board-card--blue" data-label="LO QUE HAGO" style="left:260px;top:10px;width:280px;">
+            <p class="bc-label">Investigación UX · Clarity · GA4</p>
+            <p class="bc-text">Analizo comportamientos, necesidades y contextos de uso para transformar información compleja en decisiones de diseño claras y significativas.</p>
+            <div class="bc-dots bc-dots--dark"><div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div></div>
           </div>
 
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Biodesign Challenge 2023</h4>
-
-              <span>2023</span>
-
-              <p class="timeline-text">
-                Creación de un chicle a base de  Lupinus polyphyllus, rica en proteínas, sostenible y biodegradable. Este proyecto fue elegido como COMMUNITY CHOICE WINNER.</p>
-
-                <p class="timeline-text">
-                   Manhattan, Nueva York</p>
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Programa LA REINA/RED</h4>
-
-              <span>2023</span>
-
-              <p class="timeline-text">
-                Diseño de una plataforma social para vecinos de La Reina, mejorando conectividad y fomentando la participación democrática, con rediseño y mejoramiento de la aplicación interna municipal.</p>
-
-                <p class="timeline-text">
-                   La Reina, Chile</p>
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Concurso Nacional Universitario Impacto Emprendedor 2022</h4>
-
-              <span>2022</span>
-
-              <p class="timeline-text">
-                Diseño de un accesorio de seguridad para universitarias. Este proyecto fue seleccionado entre los 25 mejores de un total de 500 participantes.
-              </p>
-
-              <p class="timeline-text">
-                Santiago, Chile</p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Programa TECHO/RED</h4>
-
-              <span>2022</span>
-
-              <p class="timeline-text">
-                Desarrollo de un sistema móvil de gestión para comunicación, proyectos y organización de colaboradores, mejorando la coherencia e integración de la información en las herramientas en línea.
-              </p>
-
-              <p class="timeline-text">
-                Santiago, Chile</p>
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Softwares</h3>
-
-          <ul class="skills-list content-card">
-
-            <!-- - #ADOBE -->
-            <li class="skills-item">
-              <h3 class="h3 skills-title">Programas Adobe</h3>
-
-              <div class="title-wrapper">
-
-                <h5 class="h5">Adobe Illustrator</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Adobe Photoshop</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Adobe InDesign</h5>
-                <data value="40">40%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Adobe XD</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Adobe After Effects</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <br> </br>
-            <!-- - #MODELADO 3D -->
-            <li class="skills-item">
-
-              <h3 class="h3 skills-title">Modelado 3D</h3>
-
-              <div class="title-wrapper">
-
-                <h5 class="h5">Fusion 360</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-            </li>
-
-          </li>
-
-          <li class="skills-item">
-
-            <div class="title-wrapper">
-              <h5 class="h5">SculptGL</h5>
-              <data value="50">50%</data>
-            </div>
-
-            <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 50%;"></div>
-            </div>
-          </li>
-
-          <li class="skills-item">
-
-            <div class="title-wrapper">
-              <h5 class="h5">Substance Painter</h5>
-              <data value="20">20%</data>
-            </div>
-
-            <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 20%;"></div>
-            </div>
-          </li>
-
-          <br> </br>
-          <!-- - #Herramientas de Desarrollo -->
-          <li class="skills-item">
-
-            <h3 class="h3 skills-title">Herramientas de Desarrollo</h3>
-
-            <div class="title-wrapper">
-
-              <h5 class="h5">Arduino</h5>
-              <data value="60">60%</data>
-            </div>
-
-            <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 60%;"></div>
-            </div>
-          </li>
-
-        </li>
-
-        <li class="skills-item">
-
-          <div class="title-wrapper">
-            <h5 class="h5">Processing</h5>
-            <data value="40">40%</data>
+          <!-- Card 3: Prototipo — blush -->
+          <div class="board-card board-card--blush" data-label="MI SELLO" style="left:240px;top:180px;width:260px;">
+            <p class="bc-label">Prototipo</p>
+            <p class="bc-text">Creo prototipos digitales y físicos para explorar ideas, validar conceptos y comunicar experiencias antes de su implementación.</p>
+            <div class="bc-dots bc-dots--dark"><div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div></div>
           </div>
 
-          <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 40%;"></div>
-          </div>
-        </li>
-
-        <li class="skills-item">
-
-          <div class="title-wrapper">
-            <h5 class="h5">Unity</h5>
-            <data value="60">60%</data>
-          </div>
-
-          <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 60%;"></div>
-          </div>
-        </li>
-
-        <li class="skills-item">
-
-          <div class="title-wrapper">
-            <h5 class="h5">Visual Studio</h5>
-            <data value="70">70%</data>
+          <!-- Card 4: Fabricación Digital y 3D — blanco -->
+          <div class="board-card board-card--white" data-label="MI ESPECIALIDAD" style="left:10px;top:180px;width:210px;">
+            <p class="bc-label">Fabricación Digital y 3D</p>
+            <p class="bc-text">Diseño y materializo experiencias a través de modelado 3D, prototipado físico y tecnologías de fabricación digital.</p>
+            <div class="bc-dots bc-dots--dark"><div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div>
+            <div class="bc-dot"></div></div>
           </div>
 
-          <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 70%;"></div>
-          </div>
-        </li>
+        </div><!-- /board-canvas -->
 
-        <li class="skills-item">
-
-          <div class="title-wrapper">
-            <h5 class="h5">Atom</h5>
-            <data value="20">20%</data>
-          </div>
-
-          <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 20%;"></div>
-          </div>
-        </li>
-
-        <li class="skills-item">
-
-          <div class="title-wrapper">
-            <h5 class="h5">Angular</h5>
-            <data value="30">30%</data>
-          </div>
-
-          <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 30%;"></div>
-          </div>
-        </li>
-
-        <li class="skills-item">
-
-          <div class="title-wrapper">
-            <h5 class="h5">Flutter</h5>
-            <data value="40">40%</data>
-          </div>
-
-          <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 40%;"></div>
-          </div>
-        </li>
-        <br> </br>
-          <!-- - #Plataformas (IoT) y Automatización: -->
-          <li class="skills-item">
-
-            <h3 class="h3 skills-title">Plataformas (IoT) y Automatización</h3>
-
-            <div class="title-wrapper">
-
-              <h5 class="h5">Blynk</h5>
-              <data value="60">60%</data>
-            </div>
-
-            <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 60%;"></div>
-            </div>
-          </li>
-
-          <li class="skills-item">
-
-            <div class="title-wrapper">
-              <h5 class="h5">IFTTT</h5>
-              <data value="20">20%</data>
-            </div>
-  
-            <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 20%;"></div>
-            </div>
-          </li>
-
-          <br> </br>
-          <!-- - #Herramientas de Diseño -->
-          <li class="skills-item">
-
-            <h3 class="h3 skills-title">Herramientas de Diseño</h3>
-
-            <div class="title-wrapper">
-
-              <h5 class="h5">Figma</h5>
-              <data value="90">90%</data>
-            </div>
-
-            <div class="skill-progress-bg">
-              <div class="skill-progress-fill" style="width: 90%;"></div>
-            </div>
-          </li>
-
-        </li>
-
-        <li class="skills-item">
-
-          <div class="title-wrapper">
-            <h5 class="h5">Canva</h5>
-            <data value="90">90%</data>
-          </div>
-
-          <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 90%;"></div>
-          </div>
-        </li>
-        <br> </br>
-        <!-- - #Plataformas de Gestión y Presentación -->
-        <li class="skills-item">
-
-          <h3 class="h3 skills-title">Plataformas de Gestión y Presentación</h3>
-
-          <div class="title-wrapper">
-
-            <h5 class="h5">Wordpress</h5>
-            <data value="30">30%</data>
-          </div>
-
-          <div class="skill-progress-bg">
-            <div class="skill-progress-fill" style="width: 30%;"></div>
-          </div>
-        </li>
-
-      </li>
-
-      <li class="skills-item">
-
-        <div class="title-wrapper">
-          <h5 class="h5">Word/Excel/PowerPoint</h5>
-          <data value="90">90%</data>
-        </div>
-
-        <div class="skill-progress-bg">
-          <div class="skill-progress-fill" style="width: 90%;"></div>
-        </div>
-       </li>
-
-
-     </ul>
-
-        </section>
-
-        <!-- - #LENGUAJES -->
-         <br> </br>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Lenguajes de Programación</h3>
-
-          <ul class="skills-list content-card">
-
-            <!-- - #HTML -->
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-
-                <h5 class="h5">HTML</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">CSS</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">JavaScript</h5>
-                <data value="30">30%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 30%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">C#</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">C++</h5>
-                <data value="30">30%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 30%;"></div>
-              </div>
-
-            </li>
-
-             <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Java</h5>
-                <data value="30">30%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 30%;"></div>
-              </div>
-
-            </li>
-
-
-      </article>
-
-      <!-- - #PORTFOLIO -->
-
-      <article id="portfolio" class="portfolio" data-page="portafolio">
-
-        <header>
-          <h2 class="h2 article-title">Portafolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>Todo</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Página Web</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Aplicación Móvil</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Producto Físico</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Realidad Virtual</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Seleccionar Categoría</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>Todo</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Página Web</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Aplicación Móvil</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Producto Físico</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Realidad Virtual</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="aplicación móvil">
-              <a href="detalle-soi.html">
-                
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/SO-I-mockup.jpeg" alt="so-i" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">SO-I</h3>
-
-                <p class="project-category">Aplicación Móvil</p>
-
-              </a>
-
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="página web">
-              <a href="detalle-cimenta.html">
-                
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/cimenta.jpg" alt="cimenta" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Cimenta</h3>
-
-                <p class="project-category">Página Web</p>
-
-              </a>
-
-            </li>
-            </li>
-            
-            <li class="project-item  active" data-filter-item data-category="producto físico">
-              <a href="detalle-strongum.html">
-                
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/strongum-mockup.jpeg" alt="so-i" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Strongum</h3>
-
-                <p class="project-category">Producto Físico</p>
-
-              </a>
-
-            </li>
-<!--
-            <li class="project-item  active" data-filter-item data-category="producto físico">
-              <a href="detalle-robotod.html">
-                
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/Robotod-mockup.jpeg" alt="robotod" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">RoboTod</h3>
-
-                <p class="project-category">Smart Toy</p>
-
-              </a>
-
-            </li>
-          -->
-
-            <li class="project-item  active" data-filter-item data-category="aplicación móvil">
-              <a href="detalle-lareina.html">
-                
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/LaReina-mockup.jpeg" alt="lareina" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">La Reina Conecta</h3>
-
-                <p class="project-category">Aplicación Móvil</p>
-
-              </a>
-
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="producto físico">
-              <a href="detalle-dropaid.html">
-                
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/DropAid-mockup.jpeg" alt="dropaid" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Drop Aid</h3>
-
-                <p class="project-category">Producto Físico</p>
-
-              </a>
-
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="aplicación móvil">
-              <a href="detalle-techo.html">
-                
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/Techo-mockup.jpeg" alt="techo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Techo</h3>
-
-                <p class="project-category">Aplicación Móvil</p>
-
-              </a>
-
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="realidad virtual">
-              <a href="detalle-letitup.html">
-                
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/LetItUpMotion-mockup.jpeg" alt="letitup" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Let it up Motion</h3>
-
-                <p class="project-category">Realidad Virtual</p>
-
-              </a>
-
-            </li>
-
-          </ul>
-          
-
-        </section>
-
-      </article>
-
-        <!--Modal-->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-      
-      <!--- #BLOG
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article> -->
-
-      <!--- #CONTACT-->
-
-      <article class="contact" data-page="información">
-
-        <header>
-          <h2 class="h2 article-title">Información</h2>
-        </header>
-
-     <!--- #MAPA
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>-->
-
-  <ul class="contacts-list">
-
-          <li class="contact-item">
-              <div class="icon-box">
-                <img src="./assets/images/icon-cv.svg" width="25" height="20">
-              </div>
-          
-              <div class="contact-info">
-                <p class="contact-title">Currículum Vitae</p>
-                <a href="assets/Curriculum_MariajoseMendozaLopetegui.pdf" download="curriculum_mariajosemendozalopetegui.pdf" class="download-link">Descargar CV</a>
-              </div>              
-            </a>
-          </li>
-        </ul>
-
-          <!--  
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form> -->
-
-        </section>
-
-      </article>
+      </div><!-- /sm-board -->
 
     </div>
 
-  </main>
-  <!--- custom js link -->
-  <script src="./assets/js/script.js"></script>
+  </div>
+</section>
 
-  <!--- ionicon link-->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- =====================================================
+     FOOTER — fondo navy, igual al código de referencia
+     Logo + email con pill hover · divider · copyright + redes
+===================================================== -->
+<footer class="site-footer site-footer--navy">
+
+  <!-- Fila superior: logo + email pill -->
+  <div class="footer-top">
+    <span class="footer-logo-text">MML.</span>
+    <a href="mailto:cote.mendozalp@gmail.com" class="footer-email-pill">
+      cote.mendozalp@gmail.com
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Divider -->
+  <div class="footer-divider"></div>
+
+  <!-- Fila inferior: copyright + redes -->
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Mariajosé Mendoza Lopetegui</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <span class="footer-location">Santiago, Chile</span>
+    </div>
+  </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+
+<!-- =====================================================
+     DRAG ENGINE — hero + board cards
+===================================================== -->
+<script>
+(function () {
+  const GRID = 24;
+
+  /* ── Motor de drag con clamping ── */
+  function makeDraggable(el, container, initX, initY, onFirst) {
+    let drag = false, sx, sy, ox, oy, px = initX, py = initY, firstDone = false;
+
+    function limits() {
+      const c = container.getBoundingClientRect();
+      const PAD = 56;
+      return { minX: -(c.width/2-PAD), maxX: c.width/2-PAD, minY: -(c.height/2-PAD), maxY: c.height/2-PAD };
+    }
+    function clamp(v,a,b){ return Math.max(a,Math.min(b,v)); }
+    function setPos(x,y,anim){
+      const L=limits(); px=clamp(x,L.minX,L.maxX); py=clamp(y,L.minY,L.maxY);
+      el.style.transition = anim?'transform .18s cubic-bezier(.25,.46,.45,.94)':'';
+      el.style.transform = `translate(calc(-50% + ${px}px), calc(-50% + ${py}px))`;
+      if(anim) setTimeout(()=>el.style.transition='',200);
+    }
+    function snap(){ setPos(Math.round(px/GRID)*GRID, Math.round(py/GRID)*GRID, true); }
+    function down(cx,cy){ drag=true; sx=cx; sy=cy; ox=px; oy=py; el.classList.add('is-dragging'); el.style.zIndex=20; if(!firstDone){firstDone=true; if(onFirst)onFirst();} }
+    function move(cx,cy){ if(!drag)return; setPos(ox+(cx-sx),oy+(cy-sy),false); }
+    function up(){ if(!drag)return; drag=false; el.classList.remove('is-dragging'); el.style.zIndex=''; snap(); }
+
+    el.addEventListener('mousedown', e=>{ if(!e.target.closest('a')){down(e.clientX,e.clientY);e.preventDefault();} });
+    window.addEventListener('mousemove', e=>move(e.clientX,e.clientY));
+    window.addEventListener('mouseup', up);
+    el.addEventListener('touchstart', e=>{const t=e.touches[0];down(t.clientX,t.clientY);},{passive:true});
+    window.addEventListener('touchmove', e=>{if(drag){const t=e.touches[0];move(t.clientX,t.clientY);}},{passive:true});
+    window.addEventListener('touchend', up);
+    setPos(px,py,false);
+  }
+
+  /* ── Hero drag — con clamping entre header y subtitle ──
+     El nombre no puede:
+       - subir más que 10px bajo el header (80px desde top)
+       - bajar más que el subtitle (que está a ~6rem del fondo)
+     Se calcula dinámicamente en cada move.
+  ── */
+  const heroCard = document.getElementById('hero-name-card');
+  const heroArea = document.getElementById('hero-drag-area');
+  const hintHero = document.getElementById('drag-hint-hero');
+
+  if(heroCard && heroArea){
+    let heroDrag=false, hsx,hsy,hox,hoy,hpx=0,hpy=0,hFirst=false;
+    const GRID=24, PAD_X=32;
+
+    function heroLimits(){
+      const section  = document.getElementById('hero-section');
+      const subtitle = section.querySelector('.hero-subtitle');
+      const sRect    = section.getBoundingClientRect();
+      const cW       = heroCard.offsetWidth;
+      const cH       = heroCard.offsetHeight;
+
+      const HEADER_H = 80;   /* altura aprox. del header fijo */
+      const GAP      = 16;   /* espacio mínimo entre el nombre y el subtítulo */
+
+      /* Límite superior: 10px bajo el borde del header */
+      const minY = -(sRect.height / 2) + HEADER_H + 10 + cH / 2;
+
+      /* Límite inferior: justo encima del subtítulo (medido en tiempo real) */
+      let maxY;
+      if (subtitle) {
+        const subRect  = subtitle.getBoundingClientRect();
+        /* Posición del top del subtitle relativo al centro de la sección */
+        const subTopFromCenter = subRect.top - (sRect.top + sRect.height / 2);
+        maxY = subTopFromCenter - cH / 2 - GAP;
+      } else {
+        maxY = sRect.height / 2 - 120 - cH / 2;
+      }
+
+      const minX = -(sRect.width  / 2) + PAD_X + cW / 2;
+      const maxX =  (sRect.width  / 2) - PAD_X - cW / 2;
+
+      return { minX, maxX, minY, maxY };
+    }
+
+    function heroSetPos(x,y,anim){
+      const L = heroLimits();
+      hpx = Math.max(L.minX, Math.min(L.maxX, x));
+      hpy = Math.max(L.minY, Math.min(L.maxY, y));
+      heroCard.style.transition = anim?'transform .18s cubic-bezier(.25,.46,.45,.94)':'';
+      heroCard.style.transform = `translate(calc(-50% + ${hpx}px), calc(-50% + ${hpy}px))`;
+      if(anim) setTimeout(()=>heroCard.style.transition='',200);
+    }
+
+    function heroSnap(){
+      heroSetPos(Math.round(hpx/GRID)*GRID, Math.round(hpy/GRID)*GRID, true);
+    }
+
+    heroCard.addEventListener('mousedown', e=>{
+      if(e.target.closest('a')) return;
+      heroDrag=true; hsx=e.clientX; hsy=e.clientY; hox=hpx; hoy=hpy;
+      heroCard.classList.add('is-dragging'); heroCard.style.zIndex=20;
+      if(!hFirst){ hFirst=true; hintHero.style.opacity='0'; setTimeout(()=>hintHero.style.display='none',400); }
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', e=>{ if(!heroDrag)return; heroSetPos(hox+(e.clientX-hsx), hoy+(e.clientY-hsy), false); });
+    window.addEventListener('mouseup',   ()=>{ if(!heroDrag)return; heroDrag=false; heroCard.classList.remove('is-dragging'); heroCard.style.zIndex=''; heroSnap(); });
+
+    heroCard.addEventListener('touchstart', e=>{ const t=e.touches[0]; heroDrag=true; hsx=t.clientX; hsy=t.clientY; hox=hpx; hoy=hpy; heroCard.classList.add('is-dragging'); if(!hFirst){hFirst=true; hintHero.style.opacity='0';} },{passive:true});
+    window.addEventListener('touchmove',  e=>{ if(!heroDrag)return; const t=e.touches[0]; heroSetPos(hox+(t.clientX-hsx),hoy+(t.clientY-hsy),false); },{passive:true});
+    window.addEventListener('touchend',   ()=>{ if(!heroDrag)return; heroDrag=false; heroCard.classList.remove('is-dragging'); heroSnap(); });
+
+    heroSetPos(0,0,false);
+  }
+
+  /* ── Board: zoom tipo Miro ───────────────────────────────
+     .sm-board  = recuadro fijo con overflow:hidden (nunca cambia de tamaño)
+     .board-canvas = canvas interno que se escala y traslada
+     La grilla de puntos está en board-canvas, así escala también.
+     Las coordenadas de drag se convierten del espacio de pantalla
+     al espacio del canvas (dividiendo por la escala actual).
+  ── */
+  const board      = document.getElementById('sm-board');
+  const canvas     = document.getElementById('board-canvas');
+  const boardHint  = document.getElementById('board-hint');
+  let boardHinted  = false;
+  let boardScale   = 1;
+  const ZOOM_STEP  = 0.15;
+  const ZOOM_MIN   = 0.4;
+  const ZOOM_MAX   = 2.2;
+  const GRID_SIZE  = 28;  /* tamaño de la celda de la grilla */
+
+  /* Desplazar las cards iniciales al centro del canvas grande.
+     El canvas es 300% del board y está posicionado con top/left -100%.
+     Por eso las coordenadas iniciales de las cards deben sumarse al ancho
+     y alto del board para aparecer en el área visible. */
+  if (board) {
+    const boardOffsetX = board.offsetWidth;
+    const boardOffsetY = board.offsetHeight;
+
+    document.querySelectorAll('.board-card').forEach(card => {
+      const left = parseInt(card.style.left) || 0;
+      const top  = parseInt(card.style.top)  || 0;
+      card.style.left = (left + boardOffsetX) + 'px';
+      card.style.top  = (top  + boardOffsetY) + 'px';
+    });
+  }
+
+  /* Aplicar zoom al canvas interno — el recuadro .sm-board no cambia.
+     transform-origin: center center → las cards se escalan desde el centro,
+     exactamente como Miro/Figma al hacer Ctrl+scroll. */
+  function applyZoom(newScale, anim) {
+    boardScale = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, newScale));
+    canvas.style.transition = anim ? 'transform .22s cubic-bezier(.25,.46,.45,.94)' : '';
+    canvas.style.transform  = `scale(${boardScale})`;
+    if (anim) setTimeout(() => canvas.style.transition = '', 240);
+    /* Actualizar indicador */
+    const lvl = document.getElementById('zoom-level');
+    if (lvl) lvl.textContent = Math.round(boardScale * 100) + '%';
+  }
+
+  /* Botones zoom: pivote = centro del board */
+  const btnIn  = document.getElementById('zoom-in');
+  const btnOut = document.getElementById('zoom-out');
+
+  if (btnIn)  btnIn .addEventListener('click', () => applyZoom(boardScale + ZOOM_STEP, true));
+  if (btnOut) btnOut.addEventListener('click', () => applyZoom(boardScale - ZOOM_STEP, true));
+
+  /* Rueda del ratón: pivote = posición del cursor dentro del board */
+  board.addEventListener('wheel', e => {
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? ZOOM_STEP : -ZOOM_STEP;
+    applyZoom(boardScale + delta, false);
+  }, { passive: false });
+
+  /* Pinch-to-zoom (mobile): pivote = punto medio entre los dos dedos */
+  let lastPinchDist = null;
+
+  board.addEventListener('touchstart', e => {
+    if (e.touches.length === 2) {
+      const t0 = e.touches[0], t1 = e.touches[1];
+      lastPinchDist = Math.hypot(t0.clientX - t1.clientX, t0.clientY - t1.clientY);
+    }
+  }, { passive: true });
+
+  board.addEventListener('touchmove', e => {
+    if (e.touches.length === 2 && lastPinchDist) {
+      const t0   = e.touches[0], t1 = e.touches[1];
+      const dist = Math.hypot(t0.clientX - t1.clientX, t0.clientY - t1.clientY);
+      const ratio = dist / lastPinchDist;
+      applyZoom(boardScale * ratio, false);
+      lastPinchDist = dist;
+    }
+  }, { passive: true });
+
+  board.addEventListener('touchend', () => { lastPinchDist = null; });
+
+  /* ── Pan/Drag del canvas ─────────────────────────────────── */
+  let canvasDrag = false, canvasSx, canvasSy, canvasStartX = 0, canvasStartY = 0;
+  let canvasOffsetX = 0, canvasOffsetY = 0;
+
+  function updateCanvasPosition() {
+    canvas.style.transition = '';
+    canvas.style.transform = `scale(${boardScale}) translate(${canvasOffsetX}px, ${canvasOffsetY}px)`;
+  }
+
+  board.addEventListener('mousedown', e => {
+    if (e.target.closest('.board-card')) return;
+    canvasDrag = true;
+    canvasSx = e.clientX;
+    canvasSy = e.clientY;
+    canvasStartX = canvasOffsetX;
+    canvasStartY = canvasOffsetY;
+    board.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+
+  window.addEventListener('mousemove', e => {
+    if (!canvasDrag) return;
+    canvasOffsetX = canvasStartX + (e.clientX - canvasSx) / boardScale;
+    canvasOffsetY = canvasStartY + (e.clientY - canvasSy) / boardScale;
+    updateCanvasPosition();
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (!canvasDrag) return;
+    canvasDrag = false;
+    board.style.cursor = 'default';
+  });
+
+  /* ── Drag de cada card ─────────────────────────────────── */
+  const isMobile = () => window.innerWidth <= 768;
+
+  document.querySelectorAll('.board-card').forEach(card => {
+    let drag=false, sx, sy, startL, startT;
+
+    function onDown(cx,cy){
+      if (isMobile()) return;
+      drag=true; sx=cx; sy=cy;
+      startL = parseInt(card.style.left) || 0;
+      startT = parseInt(card.style.top)  || 0;
+      card.style.zIndex = 50;
+      card.classList.add('is-dragging');
+      if (!boardHinted) {
+        boardHinted = true;
+        boardHint.style.opacity = '0';
+        setTimeout(() => boardHint.style.display = 'none', 400);
+      }
+    }
+
+    function onMove(cx,cy){
+      if (!drag) return;
+      /* Convertir desplazamiento de pantalla → espacio del canvas (÷ escala) */
+      const rawL = startL + (cx - sx) / boardScale;
+      const rawT = startT + (cy - sy) / boardScale;
+      /* Límites en coordenadas nativas del canvas */
+      const cNativeW = canvas.offsetWidth;
+      const cNativeH = canvas.offsetHeight;
+      const cW = card.offsetWidth;
+      const cH = card.offsetHeight;
+      card.style.left = Math.max(0, Math.min(cNativeW - cW, rawL)) + 'px';
+      card.style.top  = Math.max(0, Math.min(cNativeH - cH, rawT)) + 'px';
+    }
+
+    function onUp(){
+      if (!drag) return;
+      drag = false;
+      card.style.zIndex = '';
+      card.classList.remove('is-dragging');
+      /* Snap a grilla */
+      card.style.left = (Math.round(parseInt(card.style.left) / GRID) * GRID) + 'px';
+      card.style.top  = (Math.round(parseInt(card.style.top)  / GRID) * GRID) + 'px';
+    }
+
+    card.addEventListener('mousedown', e => { onDown(e.clientX, e.clientY); e.preventDefault(); });
+    window.addEventListener('mousemove', e => onMove(e.clientX, e.clientY));
+    window.addEventListener('mouseup', onUp);
+
+    card.addEventListener('touchstart', e => {
+      if (e.touches.length === 1) { const t = e.touches[0]; onDown(t.clientX, t.clientY); }
+    }, { passive: true });
+    window.addEventListener('touchmove', e => {
+      if (drag && e.touches.length === 1) { const t = e.touches[0]; onMove(t.clientX, t.clientY); }
+    }, { passive: true });
+    window.addEventListener('touchend', onUp);
+  });
+
+})();
+</script>
 
 </body>
-
 </html>

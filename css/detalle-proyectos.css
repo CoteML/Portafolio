@@ -1,0 +1,1019 @@
+/* ==========================================================
+   DETALLE DE PROYECTOS — Compartido entre todos los
+   proyecto-*.html (case studies individuales)
+   Secciones: Hero · Contexto · Problema · Investigación ·
+              Definición · Proceso · Solución · Resultados ·
+              Reflexión · Producto en vivo
+   ========================================================== */
+
+
+/* ── ESPACIADO POR HEADER FIJO ───────────────────────────── */
+
+body {
+  /* El header ocupa ~5rem; el back-btn agrega ~4rem más */
+  padding-top: 0;
+}
+
+
+/* ── BOTÓN VOLVER ────────────────────────────────────────── */
+
+.back-btn {
+  position: sticky;
+  top: 5rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  width: 100%;
+  padding: 1.15rem 2.5rem;
+  margin-top: 5rem;
+
+  font-size: .7rem;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+
+  color: #fff;
+  text-decoration: none;
+  background: rgba(14, 22, 39, .96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+
+  transition: opacity .2s;
+}
+
+.back-btn:hover {
+  opacity: .5;
+}
+
+
+/* ── HERO DEL CASO ───────────────────────────────────────── */
+
+.case-hero {
+  height: 65vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem 2.5rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(14, 22, 39, .08);
+}
+
+/* Imagen de fondo */
+.case-hero-img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.case-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay navy */
+.case-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 22, 39, .42);
+  z-index: 1;
+}
+
+/* Contenido sobre el hero */
+.case-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 60rem;
+}
+
+.case-hero-badges {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Badge de categoría (pill translúcido) */
+.case-badge-pill {
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  background: rgba(255, 255, 255, .18);
+  backdrop-filter: blur(10px);
+  padding: .35rem .9rem;
+  border-radius: 999px;
+}
+
+/* Año en monoespaciado */
+.case-badge-year {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.case-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.05;
+  color: white;
+}
+
+
+/* ── CUERPO DEL CASO ─────────────────────────────────────── */
+
+.case-body {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 6rem 2.5rem 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+
+/* ── FILA EDITORIAL ──────────────────────────────────────── */
+/* Label izquierda (8rem) + contenido a la derecha */
+
+.case-row {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 3rem;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+
+.case-row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .case-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+
+/* ── CONTEXTO ────────────────────────────────────────────── */
+
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  .context-grid { grid-template-columns: 1fr; }
+}
+
+.context-item span {
+  display: block;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: rgba(14, 22, 39, .40);
+  margin-bottom: .4rem;
+}
+
+.context-item strong {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+
+/* ── EL PROBLEMA ─────────────────────────────────────────── */
+
+.problem-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2.8vw, 1.75rem);
+  line-height: 1.6;
+  color: var(--navy);
+}
+
+
+/* ── INVESTIGACIÓN ───────────────────────────────────────── */
+
+.research-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card clara: hallazgos cuantitativos */
+.research-card-light {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(14, 22, 39, .05);
+}
+
+/* Card oscura: insight cualitativo destacado */
+.research-card-dark {
+  background: var(--navy);
+  padding: 2rem;
+  border-radius: var(--radius);
+}
+
+.research-card-light h4,
+.research-card-dark h4 {
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-bottom: .75rem;
+}
+
+.research-card-light h4 { color: var(--navy); }
+.research-card-dark  h4 { color: rgba(250, 247, 246, .55); }
+
+.research-card-light p {
+  font-size: .9rem;
+  line-height: 1.7;
+  color: rgba(14, 22, 39, .68);
+  font-weight: 300;
+}
+
+.research-card-dark p {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: white;
+}
+
+
+/* ── DEFINICIÓN / DESCRIPCIÓN GENERAL ───────────────────── */
+
+.definition-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(14, 22, 39, .72);
+  font-weight: 300;
+}
+
+
+/* ── PROCESO DE DISEÑO ───────────────────────────────────── */
+
+.process-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.process-row {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 500px) {
+  .process-row { flex-direction: column; gap: .5rem; }
+}
+
+.process-label {
+  width: 30%;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+
+.process-value {
+  font-size: .85rem;
+  line-height: 1.7;
+  color: rgba(14, 22, 39, .58);
+  font-weight: 300;
+}
+
+
+/* ── SOLUCIÓN FINAL ──────────────────────────────────────── */
+
+.solution-text {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--navy);
+  margin-bottom: 2rem;
+}
+
+.solution-thumb {
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(14, 22, 39, .08);
+}
+
+.solution-thumb img {
+  width: 100%;
+  display: block;
+}
+
+
+/* ── RESULTADOS ──────────────────────────────────────────── */
+
+.results-big {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.results-sub {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(14, 22, 39, .60);
+  font-weight: 300;
+}
+
+
+/* ── REFLEXIÓN FINAL ─────────────────────────────────────── */
+
+.reflection-card {
+  background: white;
+  padding: 3rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(14, 22, 39, .05);
+  box-shadow: 0 4px 20px rgba(14, 22, 39, .05);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.reflection-block h4 {
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--navy);
+  margin-bottom: .65rem;
+}
+
+.reflection-block p {
+  font-size: .9rem;
+  line-height: 1.75;
+  color: rgba(14, 22, 39, .65);
+  font-weight: 300;
+}
+
+/* Cita final en serif italic */
+.reflection-block.italic p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+
+/* ── PRODUCTO EN VIVO ────────────────────────────────────── */
+/* Card final destacada en navy con imagen y CTA */
+
+.live-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  margin: 0;
+  align-items: stretch;
+}
+
+.live-section-full {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.live-section-full .case-content {
+  width: 100%;
+  max-width: none;
+}
+
+.live-card {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--navy);
+  box-shadow: 0 12px 50px rgba(14, 22, 39, .20);
+  transition: transform .5s ease;
+  width: 100%;
+  align-items: stretch;
+  min-height: 15rem;
+}
+
+.live-card:hover {
+  transform: translateY(-6px);
+}
+
+@media (max-width: 900px) {
+  .live-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .live-card { grid-template-columns: 1fr; }
+}
+
+.live-card-content {
+  padding: 1.5rem 1.4rem 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--off-white);
+  min-width: 0;
+}
+
+.live-card-eyebrow {
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: rgba(250, 247, 246, .45);
+  margin-bottom: 1rem;
+}
+
+.live-card-content h3 {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: .7rem;
+}
+
+.live-card-content p {
+  font-size: .8rem;
+  line-height: 1.6;
+  color: rgba(250, 247, 246, .65);
+  font-weight: 300;
+  margin-bottom: 1.15rem;
+  max-width: 20rem;
+}
+
+/* Botón "Ver sitio en vivo" */
+.live-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  width: fit-content;
+  min-width: 9.5rem;
+  max-width: 100%;
+  text-decoration: none;
+  align-self: flex-start;
+  white-space: nowrap;
+
+  font-family: var(--font-sans);
+  font-size: .64rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+
+  background: var(--off-white);
+  color: var(--navy);
+  padding: .68rem 1.1rem;
+  border-radius: 999px;
+  transition: background .3s;
+}
+
+.live-card-btn:hover {
+  background: var(--blush);
+}
+
+/* Imagen lateral de la live card */
+.live-card-thumb {
+  overflow: hidden;
+  min-height: 16rem;
+  flex: 0 0 240px;
+}
+
+.live-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s ease;
+}
+
+.live-card:hover .live-card-thumb img {
+  transform: scale(1.06);
+}
+
+
+/* ==========================================================
+   EXTENSIÓN — Mockups con marco de navegador, comparativas
+   antes/después, mapa conceptual y mini-cards relacionadas.
+   Pensado para usarse DENTRO de un .case-row, en la columna
+   de contenido (a la derecha del label).
+   ========================================================== */
+
+
+/* ── Browser frame (marco de navegador con captura real) ─── */
+
+.browser-frame {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow:
+    0 1px 2px rgba(14,22,39,.06),
+    0 20px 50px rgba(14,22,39,.16);
+  border: 1px solid rgba(14,22,39,.08);
+}
+
+.browser-topbar {
+  height: 34px;
+  background: #EDEAE7;
+  display: flex;
+  align-items: center;
+  padding: 0 .85rem;
+  gap: .4rem;
+  border-bottom: 1px solid rgba(14,22,39,.06);
+}
+
+.browser-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(14,22,39,.18);
+}
+
+.browser-urlbar {
+  margin-left: .75rem;
+  flex: 1;
+  height: 18px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid rgba(14,22,39,.08);
+}
+
+.browser-body {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  max-height: 640px;
+}
+
+.browser-body img {
+  width: 100%;
+  display: block;
+}
+
+/* Variante: marco de mobile (más angosto, esquinas redondeadas tipo teléfono) */
+.phone-frame {
+  position: relative;
+  max-width: 280px;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #fff;
+  border: 6px solid var(--navy);
+  box-shadow: 0 20px 50px rgba(14,22,39,.18);
+}
+
+.phone-frame .browser-body {
+  max-height: 560px;
+}
+
+.phone-notch {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 18px;
+  background: var(--navy);
+  border-radius: 0 0 10px 10px;
+  z-index: 5;
+}
+
+/* Etiqueta de versión (Antes / Después / Propuesta 1 / Versión Final)
+   position: sticky para que se mantenga visible mientras se hace
+   scroll dentro de .browser-body (que tiene overflow-y: auto) */
+.version-tag {
+  position: sticky;
+  top: .85rem;
+  margin: .85rem 0 0 .85rem;
+  display: inline-block;
+  z-index: 5;
+  font-size: .58rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  padding: .3rem .7rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  white-space: nowrap;
+}
+
+.version-tag--before { background: rgba(14,22,39,.85); color: #fff; }
+.version-tag--after   { background: var(--mauve); color: #fff; }
+.version-tag--wireframe { background: rgba(14,22,39,.55); color: #fff; }
+
+
+/* ── Anotaciones (punto + línea + etiqueta) ──────────────── */
+
+.annotation-wrap {
+  position: relative;
+}
+
+.annotation {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  pointer-events: none;
+}
+
+.annotation-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px rgba(14,22,39,.3);
+  flex-shrink: 0;
+}
+
+.annotation-line {
+  width: 32px;
+  height: 1.5px;
+  background: var(--navy);
+  flex-shrink: 0;
+}
+
+.annotation-label {
+  background: var(--navy);
+  color: #fff;
+  font-size: .62rem;
+  font-weight: 500;
+  padding: .32rem .65rem;
+  border-radius: 4px;
+  line-height: 1.3;
+  font-family: var(--font-sans);
+  max-width: 11rem;
+}
+
+
+/* ── Captions debajo de imágenes ─────────────────────────── */
+
+.frame-caption {
+  margin-top: 1rem;
+  font-size: .8rem;
+  color: rgba(14,22,39,.55);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.frame-caption strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+
+/* ── Grid comparativo (2-3 columnas) ─────────────────────── */
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.compare-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* ── Grid de imágenes simples (research, capturas) ───────── */
+
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.img-grid img {
+  border-radius: 10px;
+  border: 1px solid rgba(14,22,39,.08);
+}
+
+.img-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.img-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* ── Placeholder de imagen pendiente (estilo punteado) ─────
+   Se aplica DENTRO de .browser-body (no sobre .browser-frame),
+   así el marco de navegador con topbar queda intacto y solo
+   el área de "pantalla" muestra el aviso de espera. ─────── */
+
+.browser-body.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(14,22,39,.025),
+    rgba(14,22,39,.025) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border: 1px dashed rgba(14,22,39,.18);
+  border-top: none;
+}
+
+.img-placeholder-text {
+  font-size: .68rem;
+  color: rgba(14,22,39,.35);
+  font-family: var(--font-sans);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+
+/* ── Mapa conceptual (arquitectura del sitio) ────────────── */
+
+.sitemap {
+  background: var(--off-white);
+  border: 1px solid rgba(14,22,39,.08);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.sitemap-node {
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: #fff;
+  border: 1.5px solid var(--navy);
+  border-radius: 8px;
+  padding: .65rem 1.2rem;
+  text-align: center;
+}
+
+.sitemap-node--root {
+  background: var(--navy);
+  color: #fff;
+  font-size: .85rem;
+}
+
+/* Árbol de conectores: tronco vertical + ramas horizontales + ramitas verticales */
+.sitemap-tree {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sitemap-trunk {
+  width: 1.5px;
+  height: 1.5rem;
+  background: rgba(14,22,39,.25);
+}
+
+.sitemap-row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+/* Línea horizontal que conecta todas las ramas, dibujada sobre la fila */
+.sitemap-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1.5px;
+  background: rgba(14,22,39,.25);
+}
+
+.sitemap-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
+}
+
+/* Ramita vertical que baja desde la línea horizontal hasta cada nodo */
+.sitemap-twig {
+  width: 1.5px;
+  height: 1.5rem;
+  background: rgba(14,22,39,.25);
+  margin-top: -1.5rem;
+}
+
+.sitemap-sub {
+  font-size: .65rem;
+  font-weight: 400;
+  color: rgba(14,22,39,.55);
+  background: transparent;
+  border: 1px dashed rgba(14,22,39,.25);
+  padding: .4rem .75rem;
+  border-radius: 6px;
+}
+
+.sitemap-connector {
+  width: 1.5px;
+  height: 1.25rem;
+  background: rgba(14,22,39,.2);
+}
+
+/* Footer del mapa: fila compacta, alineada a la izquierda, debajo de todo */
+.sitemap-footer-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed rgba(14,22,39,.18);
+}
+
+.sitemap-node--footer {
+  flex-shrink: 0;
+}
+
+.sitemap-footer-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+
+/* ── Sistema de color por área (chips) ───────────────────── */
+
+.color-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.color-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  font-size: .68rem;
+  color: rgba(14,22,39,.55);
+  font-family: var(--font-sans);
+}
+
+.color-chip-swatch {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(14,22,39,.1);
+}
+
+
+/* ── Conoce las áreas de negocio (mini cards) ────────────── */
+
+.related-section {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 2.5rem 6rem;
+}
+
+.related-heading {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.related-card {
+  position: relative;
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--navy);
+}
+
+.related-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .5s cubic-bezier(.25,.46,.45,.94);
+}
+
+.related-card:hover img { transform: scale(1.05); }
+
+.related-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14,22,39,.8) 0%, rgba(14,22,39,.1) 55%, transparent 100%);
+}
+
+.related-card-info {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 1.4rem;
+  z-index: 2;
+}
+
+.related-card-tag {
+  display: block;
+  font-size: .58rem;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-weight: 500;
+  color: var(--blush);
+  margin-bottom: .35rem;
+}
+
+.related-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: .25rem;
+}
+
+.related-card-desc {
+  font-size: .7rem;
+  color: rgba(255,255,255,.7);
+  line-height: 1.45;
+}
+
+
+/* ── Link dentro de context-item (ej. nombre con LinkedIn) ── */
+
+.context-link {
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s ease, color .2s ease;
+}
+
+.context-link:hover {
+  color: var(--mauve);
+  border-bottom-color: var(--mauve);
+}
+
+
+/* ── Herramientas (pills simples) ────────────────────────── */
+
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.tool-pill {
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--navy);
+  padding: .5rem 1.1rem;
+  border: 1px solid rgba(14,22,39,.15);
+  border-radius: 999px;
+}
+
+
+/* ── Responsive: extensión ───────────────────────────────── */
+
+@media (max-width: 860px) {
+  .compare-grid,
+  .compare-grid--3 { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  .img-grid,
+  .img-grid--2 { grid-template-columns: 1fr; }
+
+  .related-grid { grid-template-columns: 1fr; }
+  .related-section { padding: 0 1.25rem 4rem; }
+
+  .annotation-label { font-size: .58rem; max-width: 9rem; }
+
+  .sitemap-row { flex-direction: column; align-items: center; }
+  .sitemap-row::before { display: none; }
+  .sitemap-twig { display: none; }
+  .sitemap-branch { gap: .5rem; }
+  .sitemap-footer-row { flex-direction: column; align-items: flex-start; }
+  .img-grid--3 { grid-template-columns: 1fr; }
+}

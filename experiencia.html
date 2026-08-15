@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiencia | Mariajosé Mendoza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/experiencia.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header" class="site-header transparent">
+  <a href="index.html" class="header-logo">MML.</a>
+  <nav class="header-nav">
+    <a href="index.html">Sobre mí</a>
+    <a href="experiencia.html" class="active">Experiencia</a>
+    <a href="proyectos.html">Trabajos</a>
+  </nav>
+  <a href="assets/pdf/CV-Mariajose-Mendoza.pdf" class="header-cta" download>Descargar CV</a>
+</header>
+
+<nav class="mobile-nav">
+  <a href="index.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/></svg>
+    Sobre mí
+  </a>
+  <a href="experiencia.html" class="active">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+    Experiencia
+  </a>
+  <a href="proyectos.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+    Trabajos
+  </a>
+</nav>
+
+
+<section class="tray-section">
+  <div class="tray-inner">
+
+    <p class="u-label">Mi recorrido</p>
+    <h1 class="tray-heading">Mi Trayectoria.</h1>
+    <p class="tray-sub">Formación, experiencia y herramientas que dan forma a mi práctica.</p>
+
+    <!-- TABS desktop -->
+    <div class="tray-tabs" role="tablist" id="tray-tabs">
+      <button class="tray-tab active" data-tab="formacion"    role="tab">Formación</button>
+      <button class="tray-tab"        data-tab="experiencia"  role="tab">Experiencia</button>
+      <button class="tray-tab"        data-tab="herramientas" role="tab">Herramientas</button>
+      <button class="tray-tab"        data-tab="certificados" role="tab">Certificados</button>
+      <button class="tray-tab"        data-tab="premios"      role="tab">Premios</button>
+    </div>
+
+    <!-- DROPDOWN mobile -->
+    <select class="tray-select" id="tray-select" aria-label="Sección de trayectoria">
+      <option value="formacion">Formación</option>
+      <option value="experiencia">Experiencia</option>
+      <option value="herramientas">Herramientas</option>
+      <option value="certificados">Certificados</option>
+      <option value="premios">Premios</option>
+    </select>
+
+
+    <!-- ══════════════════════════════════════════════════
+         FORMACIÓN — estilo imagen referencia:
+         institución en grande arriba, dot, luego detalle
+    ══════════════════════════════════════════════════ -->
+    <div class="tray-panel active" id="panel-formacion">
+      <div class="tl-wrap">
+
+        <!-- Ítem 1: Universidad del Desarrollo -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: EDUCACIÓN">
+            <div class="timeline-card">
+              <h3 class="tl-institution-big">Universidad del Desarrollo</h3>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">2019 – 2024</span>
+                <span class="tl-location">Santiago, Chile</span>
+              </div>
+              <p class="tl-cargo">Grado y Título Profesional de Diseñadora con mención en Interacción Digital</p>
+              <span class="tl-badge">★ Distinción Máxima</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ítem 2: Colegio Everest -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: EDUCACIÓN">
+            <div class="timeline-card">
+              <h3 class="tl-institution-big">Colegio Everest</h3>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">2005 – 2018</span>
+                <span class="tl-location">Santiago, Chile</span>
+              </div>
+              <p class="tl-cargo">Licenciatura Básica y Media Completa</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════
+         EXPERIENCIA — dos sub-secciones separadas:
+         1. Experiencia Laboral
+         2. Ayudantías / Universidad del Desarrollo
+    ══════════════════════════════════════════════════ -->
+    <div class="tray-panel" id="panel-experiencia">
+
+      <!-- Sub-sección 1: Experiencia Laboral -->
+      <p class="cert-section-label">Experiencia Laboral</p>
+      <div class="tl-wrap">
+
+        <!-- Badge "Actualidad" ENCIMA de la card (fuera del box) -->
+        <div class="tl-above-badge">
+          <span class="tl-badge-active">Actualidad</span>
+        </div>
+
+        <!-- Rompecabeza: Diseñadora UX/UI (actual) — dot rosado -->
+        <div class="timeline-item tl-item--active">
+          <div class="timeline-dot timeline-dot--active"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: LABORAL">
+            <div class="timeline-card">
+              <!-- Institución como enlace -->
+              <a href="https://www.rompecabeza.cl/servicios/diseno-y-desarrollo-web/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="tl-institution-link">
+                <h3 class="tl-institution-big">Rompecabeza Agencia Digital SPA</h3>
+              </a>
+              <!-- Fecha tag + ubicación en columna -->
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Abril 2025 – hoy</span>
+                <span class="tl-location">Santiago, Chile</span>
+              </div>
+              <!-- Cargo debajo, destacado -->
+              <p class="tl-cargo">Diseñadora UX/UI</p>
+              <p class="timeline-desc">Participación en workshops con clientes para relevar necesidades y co-crear soluciones. Diseño de landing pages optimizadas para el usuario, conceptualización de proyectos a través de wireframes y creación de contenido visual.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rompecabeza: Trainee -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: LABORAL">
+            <div class="timeline-card">
+              <a href="https://www.rompecabeza.cl/servicios/diseno-y-desarrollo-web/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="tl-institution-link">
+                <h3 class="tl-institution-big">Rompecabeza Agencia Digital SPA</h3>
+              </a>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Ene – Mar 2025</span>
+                <span class="tl-location">Santiago, Chile</span>
+              </div>
+              <p class="tl-cargo">Trainee · Diseñadora UX/UI</p>
+              <p class="timeline-desc">Desarrollé experiencias digitales centradas en el usuario.</p>
+
+              <!-- Socovesa: sub-bloque dentro del mismo período -->
+              <div class="tl-sub-entry">
+                <p class="tl-sub-institution">Empresas Socovesa</p>
+                <div class="tl-meta-block">
+                  <span class="tl-date-tag">Feb 2025</span>
+                  <span class="tl-location">Vía Rompecabeza Digital</span>
+                </div>
+                <p class="tl-cargo">Diseñadora UX/UI</p>
+                <p class="timeline-desc">Diseño de landing pages, conceptualización mediante wireframes y creación de contenido visual para redes y campañas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selva: Practicante -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: LABORAL">
+            <div class="timeline-card">
+              <a href="https://www.selva.cl/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="tl-institution-link">
+                <h3 class="tl-institution-big">SELVA</h3>
+              </a>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Ene – Feb 2023</span>
+                <span class="tl-location">Santiago · Híbrido</span>
+              </div>
+              <p class="tl-cargo">Práctica Profesional</p>
+              <p class="timeline-desc">Consultora independiente especializada en la intersección entre cultura, diseño y tecnología.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sub-sección 2: Ayudantías -->
+      <p class="cert-section-label" style="margin-top:3rem;">Ayudantías · Universidad del Desarrollo</p>
+      <div class="tl-wrap">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: AYUDANTÍA">
+            <div class="timeline-card">
+              <p class="tl-cargo">Desarrollo Web</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Mar – Jun 2024</span>
+              </div>
+              <p class="timeline-desc">Apoyo en conceptos de programación y diseño web. Fomenté un ambiente colaborativo y resolución de dudas técnicas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: AYUDANTÍA">
+            <div class="timeline-card">
+              <p class="tl-cargo">Taller Diseño de Videojuegos</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Ago – Nov 2023</span>
+              </div>
+              <p class="timeline-desc">Guié a los estudiantes en el proceso de creación de videojuegos, desde la conceptualización hasta la implementación.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: AYUDANTÍA">
+            <div class="timeline-card">
+              <p class="tl-cargo">Desarrollo de Aplicaciones Móviles</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Jul – Nov 2023</span>
+              </div>
+              <p class="timeline-desc">Apoyé a los estudiantes en el aprendizaje de herramientas y tecnologías para la creación de aplicaciones.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════
+         HERRAMIENTAS
+    ══════════════════════════════════════════════════ -->
+    <div class="tray-panel" id="panel-herramientas">
+      <div class="tool-groups">
+
+        <div class="tool-group">
+          <p class="tool-cat">Adobe Suite</p>
+          <div class="tool-pills">
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Illustrator</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Photoshop</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">InDesign</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Adobe XD</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">After Effects</span>
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <p class="tool-cat">Diseño &amp; Prototipado</p>
+          <div class="tool-pills">
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Figma</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Canva</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Atom</span>
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <p class="tool-cat">3D &amp; Modelado</p>
+          <div class="tool-pills">
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Fusion 360</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">SculptGL</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Unity</span>
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <p class="tool-cat">Código &amp; Desarrollo</p>
+          <div class="tool-pills">
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">HTML</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">CSS</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">JavaScript</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">C#</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">C++</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Java</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Angular</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Flutter</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Visual Studio</span>
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <p class="tool-cat">Plataformas IoT</p>
+          <div class="tool-pills">
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Arduino</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Blynk</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">IFTTT</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Processing</span>
+          </div>
+        </div>
+
+        <div class="tool-group">
+          <p class="tool-cat">Herramientas</p>
+          <div class="tool-pills">
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Wordpress</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Word</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">PowerPoint</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Excel</span>
+            <span class="tool-pill figma-frame-skill" data-label="TOOL">Salesforce</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════
+         CERTIFICADOS — con PDFs adjuntos (hover abre PDF)
+         Cada timeline-card es un enlace al PDF en nueva pestaña
+    ══════════════════════════════════════════════════ -->
+
+    <div class="tray-panel" id="panel-certificados">
+
+      <!-- Sub-sección 1: Certificados — ordenados por fecha (más reciente primero) -->
+      <p class="cert-section-label">Certificados</p>
+      <div class="tl-wrap">
+
+        <!-- Platzi — Figma Técnicas Avanzadas — Oct 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CERTIFICADO">
+            <a class="timeline-card cert-link"
+               href="assets/pdf/Certificado-figma-tecnicas-avanzadas.pdf"
+               target="_blank" rel="noopener noreferrer">
+              <div class="cert-header-row">
+                <h3 class="tl-institution-big cert-issuer">Platzi</h3>
+              </div>
+              <p class="tl-cargo">Figma: Técnicas Avanzadas de Diseño</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Octubre 2025</span>
+              </div>
+              <span class="cert-open-hint">Ver certificado ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Grupo REVO — Gestión de Clientes — Agosto 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CERTIFICADO">
+            <a class="timeline-card cert-link"
+               href="assets/pdf/certificado_-_Programa_gestio_n_de_clientes.pdf"
+               target="_blank" rel="noopener noreferrer">
+              <div class="cert-header-row">
+                <h3 class="tl-institution-big cert-issuer">Grupo REVO</h3>
+              </div>
+              <p class="tl-cargo">Programa Gestión de Clientes</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Agosto 2025</span>
+              </div>
+              <span class="cert-open-hint">Ver certificado ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Udemy — Landing Page con IA — Julio 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CERTIFICADO">
+            <a class="timeline-card cert-link"
+               href="assets/pdf/Certificado_Udemy-Mariajose-Mendoza.pdf"
+               target="_blank" rel="noopener noreferrer">
+              <div class="cert-header-row">
+                <h3 class="tl-institution-big cert-issuer">Udemy</h3>
+              </div>
+              <p class="tl-cargo">Crea Landing Page con IA Generativa y tu propio Site Builder</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Julio 2025</span>
+              </div>
+              <span class="cert-open-hint">Ver certificado ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Storytelling Marketing Digital — Marzo 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CERTIFICADO">
+            <div class="cert-header-row">
+                <h3 class="tl-institution-big cert-issuer">Udemy</h3>
+              </div>
+            <a class="timeline-card cert-link"
+               href="assets/pdf/Certificado_storytellingdelmarketingdigital.pdf"
+               target="_blank" rel="noopener noreferrer">
+              <p class="tl-cargo">Storytelling en el Marketing Digital</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Marzo 2025</span>
+              </div>
+              <span class="cert-open-hint">Ver certificado ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Domestika — Teoría del color — Feb 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CERTIFICADO">
+            <a class="timeline-card cert-link"
+               href="assets/pdf/certificate_Teoriadelcolor_Domestika.pdf"
+               target="_blank" rel="noopener noreferrer">
+              <div class="cert-header-row">
+                <h3 class="tl-institution-big cert-issuer">Domestika</h3>
+              </div>
+              <p class="tl-cargo">Teoría del color aplicada a proyectos online</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Febrero 2025</span>
+              </div>
+              <span class="cert-open-hint">Ver certificado ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Domestika — Diseño de interfaces — Ene 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CERTIFICADO">
+            <div class="cert-header-row">
+                <h3 class="tl-institution-big cert-issuer">Domestika</h3>
+              </div>
+            <a class="timeline-card cert-link"
+               href="assets/pdf/certificate_Diseno-Interfaces-Mariajose-Mendoza.pdf"
+               target="_blank" rel="noopener noreferrer">
+              <p class="tl-cargo">Diseño de interfaces para sitios web y aplicaciones</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Enero 2025</span>
+              </div>
+              <span class="cert-open-hint">Ver certificado ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Domestika — SEO — Ene 2025 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CERTIFICADO">
+            <div class="cert-header-row">
+                <h3 class="tl-institution-big cert-issuer">Domestika</h3>
+              </div>
+            <a class="timeline-card cert-link"
+               href="assets/pdf/certificate_SEO.pdf"
+               target="_blank" rel="noopener noreferrer">
+              <p class="tl-cargo">Principios básicos de SEO</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">Enero 2025</span>
+              </div>
+              <span class="cert-open-hint">Ver certificado ↗</span>
+            </a>
+          </div>
+        </div>
+
+       <!-- Universidad del Desarrollo — CTI — 2020–2023 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CERTIFICADO">
+            <div class="cert-header-row">
+                <h3 class="tl-institution-big cert-issuer">Universidad del Desarrollo</h3>
+              </div>
+            <a class="timeline-card cert-link"
+               href="assets/pdf/Certificado-Ciencia-Tecnología-Mendoza.pdf"
+               target="_blank" rel="noopener noreferrer">
+              <p class="tl-cargo">Certificado de Formación en Ciencia, Tecnología e Innovación</p>
+              <div class="tl-meta-block">
+                <span class="tl-date-tag">2020 – 2023</span>
+              </div>
+              <span class="cert-open-hint">Ver certificado ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-sección 2: Cursos Extradisciplinarios (durante la UDD) -->
+      <p class="cert-section-label" style="margin-top:3rem;">Cursos Extradisciplinarios · Universidad del Desarrollo</p>
+      <div class="tl-wrap">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CURSO">
+            <div class="timeline-card">
+              <span class="timeline-year">Abril — Jun 2023</span>
+              <h3>Taller de Robótica</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CURSO">
+            <div class="timeline-card">
+              <span class="timeline-year">Agosto — Nov 2022</span>
+              <h3>Aplicaciones Móviles: ¡Crea tu primera app!</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CURSO">
+            <div class="timeline-card">
+              <span class="timeline-year">Agosto — Nov 2021</span>
+              <h3>Aprende Lengua de Señas Chilena</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CURSO">
+            <div class="timeline-card">
+              <span class="timeline-year">Agosto — Nov 2020</span>
+              <h3>Realidad Virtual con Unity 3D</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="figma-frame-timeline" data-label="FRAME: CURSO">
+            <div class="timeline-card">
+              <span class="timeline-year">Abril — Jun 2020</span>
+              <h3>Estrategia Digital</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ══════════════════════════════════════════════════
+         PREMIOS — con link externo
+    ══════════════════════════════════════════════════ -->
+    <div class="tray-panel" id="panel-premios">
+      <div class="premio-card group">
+        <div class="premio-inner">
+
+          <div class="premio-top-row">
+            <span class="premio-eyebrow">2023 · Manhattan, Nueva York</span>
+            <div class="premio-badge">Community Choice Winner</div>
+          </div>
+
+          <h3 class="premio-title">Biodesign Challenge 2023</h3>
+
+          <p class="premio-desc">
+            Creación de un chicle a base de <em>Lupinus polyphyllus</em>, rica en proteínas,
+            sostenible y biodegradable. Presentado ante un jurado internacional en Nueva York.
+          </p>
+
+          <div class="premio-live-cta">
+            <a href="https://www.biodesignchallenge.org/summit-2023"
+               target="_blank" rel="noopener noreferrer" class="premio-live-btn">
+              Ver proyecto ↗
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /tray-inner -->
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer site-footer--navy">
+  <div class="footer-top">
+    <span class="footer-logo-text">MML.</span>
+    <a href="mailto:cote.mendozalp@gmail.com" class="footer-email-pill">
+      cote.mendozalp@gmail.com
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Mariajosé Mendoza Lopetegui</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <span class="footer-location">Santiago, Chile</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+
+<script>
+(function(){
+  const tabs   = document.querySelectorAll('.tray-tab');
+  const panels = document.querySelectorAll('.tray-panel');
+  const select = document.getElementById('tray-select');
+
+  function switchTab(target) {
+    tabs.forEach(t   => t.classList.remove('active'));
+    panels.forEach(p => { p.classList.remove('active'); p.classList.add('leaving'); });
+    const activeTab = document.querySelector('.tray-tab[data-tab="' + target + '"]');
+    if (activeTab) activeTab.classList.add('active');
+    const nextPanel = document.getElementById('panel-' + target);
+    setTimeout(() => {
+      panels.forEach(p => p.classList.remove('leaving'));
+      if (nextPanel) nextPanel.classList.add('active');
+    }, 180);
+    if (select && select.value !== target) select.value = target;
+  }
+
+  tabs.forEach(tab => { tab.addEventListener('click', () => switchTab(tab.dataset.tab)); });
+  if (select) { select.addEventListener('change', () => switchTab(select.value)); }
+})();
+</script>
+
+</body>
+</html>

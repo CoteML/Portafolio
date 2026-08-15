@@ -1,0 +1,163 @@
+/* ==========================================================
+   HEADER — Barra de navegación fija (sticky)
+   Compartido en todas las páginas
+   ========================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background .3s ease, box-shadow .3s ease, border .3s ease;
+}
+
+/* ── Estados del header ──────────────────────────────────── */
+
+/* Transparente: Home antes de hacer scroll */
+.site-header.transparent {
+  background: transparent;
+}
+
+/* Glassmorphism: tras scroll o en páginas internas */
+.site-header.scrolled {
+  background: rgba(250, 247, 246, .80);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Logo / Monograma ────────────────────────────────────── */
+
+.header-logo {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--navy);
+  transition: opacity .2s;
+}
+
+.header-logo:hover {
+  opacity: .6;
+}
+
+/* ── Navegación central ──────────────────────────────────── */
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.header-nav a {
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--navy);
+  transition: color .25s ease;
+}
+
+.header-nav a:hover {
+  color: var(--mauve);
+}
+
+/* Enlace activo de la página actual */
+.header-nav a.active {
+  color: var(--mauve);
+}
+
+/* ── CTA: Descargar CV ───────────────────────────────────── */
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--navy);
+  font-size: .7rem;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--navy);
+  transition: background .3s, color .3s, transform .2s;
+}
+
+.header-cta:hover {
+  background: var(--navy);
+  color: var(--off-white);
+  transform: translateY(-2px);
+}
+
+/* ── Navegación mobile (dock inferior) ───────────────────── */
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* Ocultar elementos desktop */
+  .header-nav {
+    display: none;
+  }
+
+  .site-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .header-cta {
+    display: inline-flex;
+  }
+
+  /* Dock flotante en la parte inferior */
+  .mobile-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    padding: .75rem 1rem;
+
+    background: rgba(250, 247, 246, .90);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border);
+  }
+
+  .mobile-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+
+    font-size: .6rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: rgba(14, 22, 39, .55);
+    transition: color .2s;
+  }
+
+  .mobile-nav a.active,
+  .mobile-nav a:hover {
+    color: var(--navy);
+  }
+
+  .mobile-nav svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.5;
+    stroke: currentColor;
+    fill: none;
+  }
+
+}

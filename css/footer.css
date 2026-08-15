@@ -1,0 +1,150 @@
+/* ==========================================================
+   FOOTER — Pie de página compartido en todas las páginas
+   Diseño navy (igual al código de referencia):
+     - Fondo: var(--navy)
+     - Fila superior: logo MML. + pill de email con hover
+     - Divider sutil
+     - Fila inferior: copyright izquierda · redes + ciudad derecha
+   ========================================================== */
+
+
+/* ── Contenedor base ─────────────────────────────────────── */
+
+.site-footer {
+  border-top: none;
+}
+
+/* Variante navy (la que usamos) */
+.site-footer--navy {
+  background: var(--navy);
+  font-family: var(--font-sans);
+}
+
+
+/* ── Fila superior: logo + email ─────────────────────────── */
+
+.footer-top {
+  padding: 3.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .footer-top {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Logo MML. */
+.footer-logo-text {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--off-white);
+}
+
+/* Pill de email con hover invertido */
+.footer-email-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .7rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(250, 247, 246, .22);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: none;
+  color: var(--off-white);
+  text-decoration: none;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+  font-family: var(--font-sans);
+}
+
+.footer-email-pill svg {
+  flex-shrink: 0;
+  transition: transform .25s ease;
+}
+
+.footer-email-pill:hover {
+  background: var(--off-white);
+  color: var(--navy);
+  border-color: var(--off-white);
+}
+
+.footer-email-pill:hover svg {
+  transform: translateX(3px);
+}
+
+
+/* ── Divider ─────────────────────────────────────────────── */
+
+.footer-divider {
+  margin: 0 2.5rem;
+  height: 1px;
+  background: rgba(250, 247, 246, .10);
+}
+
+
+/* ── Fila inferior: copyright + redes ───────────────────── */
+
+.footer-bottom {
+  padding: 1.75rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+@media (min-width: 640px) {
+  .footer-bottom {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: .62rem;
+  letter-spacing: .12em;
+  color: rgba(250, 247, 246, .28);
+}
+
+/* Redes + ciudad */
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.footer-links a {
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(250, 247, 246, .45);
+  text-decoration: none;
+  transition: opacity .2s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--off-white);
+}
+
+/* Separador · entre links */
+.footer-sep {
+  font-size: .7rem;
+  color: rgba(250, 247, 246, .20);
+}
+
+/* Ciudad */
+.footer-location {
+  font-size: .62rem;
+  letter-spacing: .12em;
+  color: rgba(250, 247, 246, .25);
+}

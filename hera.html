@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+
+  <title>Agencia Hera | Caso de Estudio · Mariajosé Mendoza</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/detalle-proyectos.css">
+
+  <!-- Estilos específicos para el embed de Figma -->
+  <style>
+    .figma-embed-wrap {
+      position: relative;
+      width: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #f0f0f0;
+      aspect-ratio: 16 / 9;
+    }
+    .figma-embed-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .figma-caption {
+      margin-top: .75rem;
+      font-size: .8rem;
+      color: var(--mauve);
+      font-family: var(--font-sans);
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+<header id="site-header" class="site-header scrolled">
+
+  <a href="index.html" class="header-logo">MML.</a>
+
+  <nav class="header-nav">
+    <a href="index.html">Sobre mí</a>
+    <a href="experiencia.html">Trayectoria</a>
+    <a href="proyectos.html" class="active">Trabajos</a>
+  </nav>
+
+  <a href="assets/pdf/CV-Mariajose-Mendoza.pdf" class="header-cta" download>
+    Descargar CV
+  </a>
+
+</header>
+
+<!-- Navegación mobile -->
+<nav class="mobile-nav">
+  <a href="index.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
+    </svg>
+    Sobre mí
+  </a>
+  <a href="experiencia.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="2" width="16" height="20" rx="2"/>
+      <line x1="8" y1="8" x2="16" y2="8"/>
+    </svg>
+    Trayectoria
+  </a>
+  <a href="proyectos.html" class="active">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="7" width="20" height="14" rx="2"/>
+      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+    </svg>
+    Trabajos
+  </a>
+</nav>
+
+
+<!-- =====================================================
+     BOTÓN VOLVER
+===================================================== -->
+<a href="proyectos.html" class="back-btn">← Volver a Trabajos</a>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+<section class="case-hero">
+
+  <div class="case-hero-img">
+    <img
+      src="assets/img/hera/thumbnail-hera.jpg"
+      alt="Agencia Hera — sitio rediseñado"
+    >
+  </div>
+
+  <div class="case-hero-overlay"></div>
+
+  <div class="case-hero-content">
+
+    <div class="case-hero-badges">
+      <span class="case-badge-pill">Diseño Web</span>
+      <span class="case-badge-year">2025</span>
+    </div>
+
+    <h1>Agencia Hera</h1>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CUERPO DEL CASO DE ESTUDIO
+===================================================== -->
+<div class="case-body">
+
+  <!-- CONTEXTO -->
+  <div class="case-row">
+
+    <h2 class="u-label">Contexto</h2>
+
+    <div class="context-grid">
+
+      <div class="context-item">
+        <span>Agencia</span>
+        <strong>Rompecabeza</strong>
+      </div>
+
+      <div class="context-item">
+        <span>Cliente</span>
+        <strong>Agencia Hera</strong>
+      </div>
+
+      <div class="context-item">
+        <span>Equipo</span>
+        <strong>
+          Diseño UX/UI — Mariajosé Mendoza<br>
+          Desarrollo —
+          <a
+            href="https://www.linkedin.com/in/jennyfer-v-arce/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="context-link"
+          >Jennyfer Vicencio</a>
+        </strong>
+      </div>
+
+      <div class="context-item">
+        <span>Año</span>
+        <strong>2025</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EL ENCARGO -->
+  <div class="case-row">
+
+    <h2 class="u-label">El Encargo</h2>
+
+    <p class="problem-text">
+      Agencia Hera es un proyecto interno de Rompecabeza: una agencia de
+      influencer marketing que conecta marcas con audiencias a través de
+      creadores de contenido. El objetivo fue rediseñar su sitio web para
+      alinear la presencia digital con la identidad de la agencia —
+      profesional, moderna y humana — y generar una experiencia que
+      transmitiera confianza a las marcas que llegan a conocerla.
+    </p>
+
+  </div>
+
+  <!-- EL PROBLEMA -->
+  <div class="case-row">
+
+    <h2 class="u-label">El Problema</h2>
+
+    <p class="definition-text">
+      El sitio anterior usaba morado, blanco y gris, pero de forma plana y
+      sin sistema visual definido. La navegación incluía "Inicio" como ítem
+      explícito — redundante, porque el logo ya cumple esa función — y el
+      orden del menú no reflejaba prioridades reales del negocio. El footer
+      se limitaba a preguntas frecuentes y dirección, dejando fuera
+      información útil. Los textos eran extensos y poco escaneables, lo que
+      hacía difícil capturar la propuesta de valor de forma rápida.
+      En resumen: había identidad, pero no coherencia visual ni
+      jerarquía de información clara.
+    </p>
+
+  </div>
+
+  <!-- ANTES / DESPUÉS -->
+  <div class="case-row">
+
+    <h2 class="u-label">Antes / Después</h2>
+
+    <div>
+      <div class="compare-grid">
+        <div>
+          <div class="browser-frame">
+            <div class="browser-topbar">
+              <div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div>
+              <div class="browser-urlbar"></div>
+            </div>
+            <div class="browser-body">
+              <span class="version-tag version-tag--before">Antes</span>
+              <img src="assets/img/hera/antes-home.jpg" alt="Sitio anterior de Agencia Hera">
+            </div>
+          </div>
+          <p class="frame-caption">
+            <strong>Sitio anterior.</strong> Paleta plana, textos extensos y navegación redundante.
+          </p>
+        </div>
+        <div>
+          <div class="browser-frame">
+            <div class="browser-topbar">
+              <div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div>
+              <div class="browser-urlbar"></div>
+            </div>
+            <div class="browser-body">
+              <span class="version-tag version-tag--after">Después</span>
+              <img src="assets/img/hera/despues-home.jpg" alt="Sitio rediseñado de Agencia Hera">
+            </div>
+          </div>
+          <p class="frame-caption">
+            <strong>Sitio rediseñado.</strong> Degradados de morado, identidad visual coherente y contenido escaneable.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DEFINICIÓN -->
+  <div class="case-row">
+
+    <h2 class="u-label">Definición</h2>
+
+    <p class="definition-text">
+      El rediseño partió con una revisión estratégica de la navegación y la
+      arquitectura de información. Se eliminó "Inicio" del menú y se
+      reordenaron las secciones según la lógica del usuario: primero entender
+      quiénes son, luego qué ofrecen, cómo trabajan, y finalmente contactar.
+      El botón de Contacto se destacó visualmente dentro del header para
+      facilitar la conversión. El footer se enriqueció con newsletter,
+      menú completo y datos de contacto — información útil que antes
+      quedaba dispersa. El tono visual cambió hacia degradados de morado
+      profundo, creando una identidad más sofisticada y reconocible.
+    </p>
+
+  </div>
+
+  <!-- ARQUITECTURA -->
+  <div class="case-row">
+
+    <h2 class="u-label">Arquitectura</h2>
+
+    <div>
+      <p class="definition-text" style="margin-bottom:2rem;">
+        Se reorganizó la navegación principal, eliminando el ítem redundante
+        de "Inicio" y priorizando el flujo natural de un visitante nuevo:
+        conocer la agencia, explorar servicios, entender la metodología y
+        contactar.
+      </p>
+
+      <div class="sitemap">
+        <div class="sitemap-node sitemap-node--root">HOME</div>
+
+        <div class="sitemap-tree">
+          <div class="sitemap-trunk"></div>
+
+          <div class="sitemap-row">
+
+            <div class="sitemap-branch">
+              <div class="sitemap-twig"></div>
+              <div class="sitemap-node">¿Quiénes somos?</div>
+              <div class="sitemap-sub">Historia · Equipo</div>
+              <div class="sitemap-sub">Gestión integral</div>
+            </div>
+
+            <div class="sitemap-branch">
+              <div class="sitemap-twig"></div>
+              <div class="sitemap-node">Servicios</div>
+              <div class="sitemap-sub">Campañas Always On</div>
+              <div class="sitemap-sub">Activaciones · UGC</div>
+              <div class="sitemap-sub">Convocatoria y asistencia</div>
+            </div>
+
+            <div class="sitemap-branch">
+              <div class="sitemap-twig"></div>
+              <div class="sitemap-node">Metodología</div>
+              <div class="sitemap-sub">Pilares HERA</div>
+              <div class="sitemap-sub">Procedimientos</div>
+              <div class="sitemap-sub">Categorías de influencers</div>
+            </div>
+
+            <div class="sitemap-branch">
+              <div class="sitemap-twig"></div>
+              <div class="sitemap-node">Blog</div>
+              <div class="sitemap-sub">Artículos por categoría</div>
+            </div>
+
+            <div class="sitemap-branch">
+              <div class="sitemap-twig"></div>
+              <div class="sitemap-node">Preguntas frecuentes</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="sitemap-footer-row">
+          <div class="sitemap-node sitemap-node--footer">Footer</div>
+          <div class="sitemap-footer-items">
+            <div class="sitemap-sub">Newsletter</div>
+            <div class="sitemap-sub">Menú completo</div>
+            <div class="sitemap-sub">Contacto · Dirección · RRSS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DECISIONES DE DISEÑO -->
+  <div class="case-row">
+
+    <h2 class="u-label">Decisiones de Diseño</h2>
+
+    <div>
+      <p class="definition-text" style="margin-bottom: 2rem;">
+        Toda la identidad visual del sitio fue definida desde cero en esta
+        iteración. Los degradados de morado, la elección tipográfica, el uso
+        de la estatua griega como elemento visual recurrente, los componentes
+        con hover, los estados activos y la jerarquía de información en cada
+        página fueron decisiones propias. El objetivo era que el sitio
+        comunicara precisamente lo que la agencia es: sofisticada, moderna y
+        con personalidad propia dentro del mercado del influencer marketing.
+      </p>
+
+      <!-- Desktop: antes/después de páginas interiores -->
+      <div class="compare-grid" style="margin-bottom: 2rem;">
+        <div>
+          <div class="browser-frame">
+            <div class="browser-topbar">
+              <div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div>
+              <div class="browser-urlbar"></div>
+            </div>
+            <div class="browser-body">
+              <img src="assets/img/hera/despues-quienessomos.jpg" alt="¿Quiénes somos? rediseñado">
+            </div>
+          </div>
+          <p class="frame-caption">¿Quiénes somos? — narrativa de marca y equipo</p>
+        </div>
+        <div>
+          <div class="browser-frame">
+            <div class="browser-topbar">
+              <div class="browser-dot"></div><div class="browser-dot"></div><div class="browser-dot"></div>
+              <div class="browser-urlbar"></div>
+            </div>
+            <div class="browser-body">
+              <img src="assets/img/hera/despues-servicios.jpg" alt="Servicios rediseñado">
+            </div>
+          </div>
+          <p class="frame-caption">Servicios — estructura clara y escaneable</p>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <div class="compare-grid compare-grid--3">
+        <div>
+          <div class="phone-frame" style="max-width:16rem; margin:0 auto;">
+            <div class="phone-notch"></div>
+            <div class="browser-body">
+              <img src="assets/img/hera/mobile-home.jpg" alt="Home mobile Hera">
+            </div>
+          </div>
+          <p class="frame-caption" style="text-align:center;">Home — mobile</p>
+        </div>
+        <div>
+          <div class="phone-frame" style="max-width:16rem; margin:0 auto;">
+            <div class="phone-notch"></div>
+            <div class="browser-body">
+              <img src="assets/img/hera/mobile-quienessomos.jpg" alt="¿Quiénes somos? mobile Hera">
+            </div>
+          </div>
+          <p class="frame-caption" style="text-align:center;">¿Quiénes somos? — mobile</p>
+        </div>
+        <div>
+          <div class="phone-frame" style="max-width:16rem; margin:0 auto;">
+            <div class="phone-notch"></div>
+            <div class="browser-body">
+              <img src="assets/img/hera/mobile-metodologia.jpg" alt="Metodología mobile Hera">
+            </div>
+          </div>
+          <p class="frame-caption" style="text-align:center;">Metodología — mobile</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- HERRAMIENTAS -->
+  <div class="case-row">
+
+    <h2 class="u-label">Herramientas</h2>
+
+    <div class="tools-list">
+      <span class="tool-pill">Figma</span>
+      <span class="tool-pill">WordPress</span>
+    </div>
+
+  </div>
+ <!-- PROTOTIPO INTERACTIVO -->
+  <div class="case-row">
+
+    <h2 class="u-label">Prototipo<br>Interactivo</h2>
+
+    <div>
+      <p class="definition-text" style="margin-bottom: 1.5rem;">
+        El prototipo incluye hovers, transiciones y todos los componentes
+        tal como fueron diseñados. Acá se puede ver la intención de diseño
+        completa, independiente de lo que llegó a desarrollo.
+      </p>
+      <div class="figma-embed-wrap">
+        <iframe
+          src="https://embed.figma.com/proto/6eReCpwUigX82WhDVRLMzV/Trabajos-Portafolio?node-id=17-22522&scaling=scale-down-width&content-scaling=fixed&page-id=17%3A19753&starting-point-node-id=17%3A22384&show-proto-sidebar=0&embed-host=share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="figma-caption">Prototipo interactivo — hovers y estados diseñados en Figma</p>
+    </div>
+
+  </div>
+
+  <!-- PRODUCTO EN VIVO -->
+  <div class="case-row" style="border-top: none;">
+
+    <div><!-- columna vacía del label --></div>
+
+    <div class="live-card">
+      <div class="live-card-content">
+        <p class="live-card-eyebrow">Producto Implementado</p>
+        <h3>Hera en Vivo</h3>
+        <p>
+          Explora la solución final implementada en producción.
+        </p>
+        <a href="https://agenciahera.cl" target="_blank" rel="noopener noreferrer" class="live-card-btn">
+          Ver sitio en vivo ↗
+        </a>
+      </div>
+      <div class="live-card-thumb">
+        <img
+          src="assets/img/hera/hera-producto.jpg"
+          alt="Agencia Hera en producción"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+  </div>
+
+
+</div><!-- /case-body -->
+
+
+<!-- FOOTER -->
+<footer class="site-footer site-footer--navy">
+  <div class="footer-top">
+    <span class="footer-logo-text">MML.</span>
+    <a href="mailto:cote.mendozalp@gmail.com" class="footer-email-pill">
+      cote.mendozalp@gmail.com
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Mariajosé Mendoza Lopetegui</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <span class="footer-location">Santiago, Chile</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+
+</body>
+</html>

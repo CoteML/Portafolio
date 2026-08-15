@@ -1,0 +1,482 @@
+/* ==========================================================
+   HOME — index.html
+   ========================================================== */
+
+
+/* ── HERO ─────────────────────────────────────────────────── */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-drag-area {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-name-drag {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  pointer-events: all;
+  padding: 1rem 1.5rem;
+}
+
+.hero-name-drag .fc-selection-border { border-color: var(--navy); border-radius: 6px; }
+.hero-name-drag .fc-handle           { border-color: var(--navy); }
+
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  line-height: .95;
+}
+
+.hero-name span {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 11vw, 9rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  color: var(--navy);
+}
+
+.hero-name span:nth-child(1) { text-align: left; }
+.hero-name span:nth-child(2) { text-align: center; margin-left: 4vw; }
+.hero-name span:nth-child(3) { text-align: right;  margin-left: 8vw; }
+
+/* Subtítulo: posición exacta medida para el clamping */
+.hero-subtitle {
+  position: absolute;
+  bottom: 9rem;                /* suficiente margen sobre el scroll indicator */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .8rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(14,22,39,.45);
+  white-space: nowrap;
+  animation: fadeIn 1s .8s both;
+  pointer-events: none;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  animation: fadeIn 1s 1.6s both;
+  pointer-events: none;
+}
+
+.scroll-indicator span {
+  font-size: .58rem;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: rgba(14,22,39,.30);
+}
+
+.scroll-line {
+  width: 1px; height: 3rem;
+  background: rgba(14,22,39,.12);
+  overflow: hidden; position: relative;
+}
+
+.scroll-line::after {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 100%; height: 50%;
+  background: var(--navy);
+  animation: scrollDrop 1.5s ease-in-out infinite;
+}
+
+.drag-hint--hero {
+  position: absolute; top: 1.25rem; right: 1.75rem;
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .58rem; font-family: var(--font-sans);
+  text-transform: uppercase; letter-spacing: .16em;
+  color: rgba(14,22,39,.32);
+  pointer-events: none;
+  animation: fadeIn 1s 2s both;
+  transition: opacity .4s ease;
+}
+
+/* Hint de zoom (desktop) */
+.zoom-hint {
+  position: absolute; bottom: 1.25rem; right: 1.75rem;
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .55rem; font-family: var(--font-sans);
+  text-transform: uppercase; letter-spacing: .14em;
+  color: rgba(14,22,39,.28);
+  pointer-events: none;
+  animation: fadeIn 1s 2.5s both;
+}
+
+@keyframes fadeIn     { from{opacity:0} to{opacity:1} }
+@keyframes scrollDrop { 0%{transform:translateY(0)} 100%{transform:translateY(3rem)} }
+
+
+/* ==========================================================
+   SOBRE MÍ — dos columnas: bio + draggable board
+   ========================================================== */
+
+.sobre-mi-section {
+  padding: 8rem 2.5rem;
+  background: var(--off-white);
+}
+
+.sm-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Columna izquierda */
+.sm-bio { display: flex; flex-direction: column; gap: 1.1rem; }
+
+.sm-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.sm-text {
+  font-size: .92rem;
+  line-height: 1.78;
+  color: rgba(14,22,39,.62);
+  font-weight: 300;
+}
+
+.fc-tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+
+.fc-tag {
+  font-size: .6rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--mauve);
+  background: rgba(184,147,157,.10);
+  border: 1px solid rgba(184,147,157,.22);
+  padding: .25rem .65rem; border-radius: 999px;
+  font-family: var(--font-sans);
+  transition: background .2s, border-color .2s;
+}
+.fc-tag:hover { background: rgba(184,147,157,.20); border-color: rgba(184,147,157,.40); }
+
+/* Columna derecha: board */
+.sm-board-wrapper { display: flex; flex-direction: column; gap: .75rem; }
+
+.board-hint {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .6rem; font-family: var(--font-sans);
+  font-weight: 500; text-transform: uppercase; letter-spacing: .14em;
+  color: rgba(14,22,39,.32);
+  transition: opacity .4s ease;
+}
+
+/* El board en sí: contenedor con grilla editorial */
+/* Recuadro fijo: nunca cambia de tamaño, overflow:hidden enmascara el zoom */
+.sm-board {
+  position: relative;
+  height: 390px;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(14,22,39,.10);
+  cursor: default;
+  /* Solo color base: la grilla la da el canvas interno */
+  background-color: #EDE8E3;
+}
+
+/* Canvas interno: MÁS GRANDE que el board (300% × 300%) para que al
+   hacer zoom out la grilla cubra todo el espacio visible.
+   Se posiciona centrado y se escala desde el centro. */
+.board-canvas {
+  position: absolute;
+  width:  300%;
+  height: 300%;
+  top:  -100%;
+  left: -100%;
+  transform-origin: center center;
+  will-change: transform;
+  background-color: #EDE8E3;
+  background-image:
+    radial-gradient(circle, rgba(14,22,39,.20) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}
+
+.board-footer-note {
+  text-align: right;
+  font-size: .62rem;
+  color: rgba(14,22,39,.22);
+  font-family: var(--font-sans);
+  letter-spacing: .05em;
+}
+
+/* Controles de zoom */
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  justify-content: flex-end;
+}
+
+.zoom-btn {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(14,22,39,.18);
+  background: white;
+  color: var(--navy);
+  font-size: .9rem;
+  font-weight: 400;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background .2s, border-color .2s;
+  line-height: 1;
+  padding: 0;
+}
+
+.zoom-btn:hover {
+  background: var(--blush);
+  border-color: var(--mauve);
+}
+
+.zoom-level {
+  font-size: .6rem; font-family: var(--font-sans);
+  color: rgba(14,22,39,.35); letter-spacing: .08em;
+  min-width: 2.5rem; text-align: center;
+}
+
+/* ── Cards del board ── */
+.board-card {
+  position: absolute;
+  border-radius: .875rem;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.10);
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: box-shadow .2s ease, transform .15s ease;
+  outline: 1.5px solid transparent;
+  outline-offset: 2px;
+}
+
+.board-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,.16);
+  outline-color: var(--navy);
+}
+
+.board-card.is-dragging {
+  cursor: grabbing;
+  box-shadow: 0 20px 50px rgba(0,0,0,.22);
+  transform: scale(1.03);
+  z-index: 50;
+  outline-color: var(--navy);
+}
+
+/* Variantes de color */
+.board-card--navy  { background: var(--navy);  color: var(--off-white); }
+.board-card--white { background: white;         color: var(--navy);      }
+.board-card--blush { background: var(--blush);  color: var(--navy);      }
+.board-card--blue  { background: #D4DFF7;       color: var(--navy);      }
+
+/* Etiqueta interior */
+.bc-label {
+  font-size: .55rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .18em;
+  opacity: .42; margin-bottom: .5rem;
+  font-family: var(--font-sans);
+}
+
+.bc-text {
+  font-size: .78rem; line-height: 1.6;
+  font-weight: 500; font-family: var(--font-sans);
+}
+
+/* Puntos decorativos 3×3 — esquina inferior derecha de cada card
+   Usamos una grilla de 3×3 divs en lugar de background-image
+   para garantizar uniformidad y alineación perfecta */
+.bc-dots {
+  position: absolute;
+  bottom: .75rem;
+  right: .85rem;
+  display: grid;
+  grid-template-columns: repeat(3, 4px);
+  grid-template-rows: repeat(3, 4px);
+  gap: 4px;
+  opacity: .25;
+  pointer-events: none;
+}
+
+.bc-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+}
+
+.bc-dots--light .bc-dot { background: var(--off-white); }
+.bc-dots--dark  .bc-dot { background: var(--navy); }
+
+
+/* ==========================================================
+   FIGMA CARD — base para el hero-name-drag
+   ========================================================== */
+
+.figma-card {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  cursor: grab;
+  user-select: none; -webkit-user-select: none;
+  overflow: visible; z-index: 1;
+}
+
+.figma-card.is-dragging { cursor: grabbing; }
+
+.figma-card::before {
+  content: attr(data-label);
+  position: absolute; top: -1.5rem; left: 0;
+  font-family: var(--font-sans); font-size: .54rem;
+  font-weight: 500; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--mauve); white-space: nowrap; pointer-events: none;
+}
+
+.fc-selection-border {
+  position: absolute; inset: -2px; border-radius: 18px;
+  border: 1.5px solid var(--navy);
+  opacity: 0; pointer-events: none;
+  transition: opacity .16s ease;
+}
+
+.figma-card:hover .fc-selection-border,
+.figma-card.is-dragging .fc-selection-border { opacity: 1; }
+
+.fc-handle {
+  position: absolute; width: 7px; height: 7px;
+  background: white; border: 1.5px solid var(--navy); border-radius: 1px;
+  opacity: 0; pointer-events: none; transition: opacity .16s ease;
+}
+
+.figma-card:hover .fc-handle,
+.figma-card.is-dragging .fc-handle { opacity: 1; }
+
+.fc-h-tl { top: -4px;    left:  -4px; }
+.fc-h-tr { top: -4px;    right: -4px; }
+.fc-h-bl { bottom: -4px; left:  -4px; }
+.fc-h-br { bottom: -4px; right: -4px; }
+
+
+/* ==========================================================
+   RESPONSIVE — MOBILE
+   ========================================================== */
+
+@media (max-width: 900px) {
+  .sm-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .sm-board  { height: 340px; }
+}
+
+@media (max-width: 768px) {
+
+  /* Nombre más pequeño en mobile */
+  .hero-name span {
+    font-size: clamp(2.6rem, 13vw, 5rem);
+  }
+
+  /* Desactivar desplazamientos escalonados en mobile (evitan overflow) */
+  .hero-name span:nth-child(2) { margin-left: 0; text-align: center; }
+  .hero-name span:nth-child(3) { margin-left: 0; text-align: center; }
+
+  /* Subtítulo en dos líneas: eliminar white-space:nowrap */
+  .hero-subtitle {
+    white-space: normal;
+    text-align: center;
+    width: 80%;
+    bottom: 8rem;
+    font-size: .72rem;
+    letter-spacing: .18em;
+    line-height: 1.6;
+  }
+
+  /* Ocultar hint de drag y zoom en mobile (no aplican) */
+  .drag-hint--hero { display: none; }
+  .zoom-hint       { display: none; }
+
+  /* Board en mobile: apilado vertical con scroll */
+  .sm-board {
+    height: auto;
+    min-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 1rem;
+    background-color: #EDE8E3;
+    /* Grilla siempre visible en mobile también */
+    background-image:
+      radial-gradient(circle, rgba(14,22,39,.20) 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+  }
+
+  /* Canvas interno: flujo normal en mobile, con su propio fondo y grilla */
+  .board-canvas {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: auto; left: auto;
+    transform: none !important;
+    display: flex;
+    flex-direction: column;
+    padding: .75rem;
+    gap: .65rem;
+    background-color: #EDE8E3;
+    background-image:
+      radial-gradient(circle, rgba(14,22,39,.20) 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+  }
+
+  /* Cards apiladas verticalmente */
+  .sm-board .board-card {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    cursor: default;
+  }
+
+  /* Ocultar puntitos de las cards en mobile */
+  .bc-dots { display: none; }
+
+  /* Ocultar hint de arrastre en mobile */
+  .board-hint          { display: none; }
+  .sm-board-wrapper > div:first-child { gap: 0; }
+
+  /* Ocultar controles de zoom en mobile */
+  .zoom-controls { display: none; }
+
+}
+
+@media (max-width: 600px) {
+  .sobre-mi-section { padding: 5rem 1.25rem; }
+  .sm-board { min-height: 460px; }
+  /* El nombre hero se desactiva como draggable en mobile */
+  .hero-name-drag {
+    position: static !important;
+    transform: none !important;
+    pointer-events: none;
+  }
+}

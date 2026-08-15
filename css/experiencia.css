@@ -1,0 +1,743 @@
+/* ==========================================================
+   EXPERIENCIA — experiencia.html
+   Secciones: cabecera, tabs, paneles (formación, experiencia,
+   herramientas, certificados, premios)
+   ========================================================== */
+
+
+/* ── SECCIÓN PRINCIPAL ───────────────────────────────────── */
+
+.tray-section {
+  padding: 9rem 2.5rem 6rem;
+  background-color: var(--off-white);
+  /* Grilla editorial muy sutil */
+  background-image:
+    linear-gradient(rgba(14,22,39,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14,22,39,.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.tray-inner { max-width: 52rem; margin: 0 auto; }
+
+.tray-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: var(--navy); line-height: 1.05;
+  margin: .5rem 0 .75rem;
+}
+
+.tray-sub {
+  font-size: .95rem; font-weight: 300;
+  color: rgba(14,22,39,.45); margin-bottom: 3rem;
+}
+
+
+/* ── BARRA DE TABS ───────────────────────────────────────── */
+
+.tray-tabs {
+  display: flex; flex-wrap: wrap; gap: 0;
+  border-bottom: 1px solid rgba(14,22,39,.10);
+  margin-bottom: 3rem;
+}
+
+.tray-tab {
+  position: relative;
+  padding: .75rem 1.1rem;
+  font-size: .68rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .18em;
+  font-family: var(--font-sans);
+  color: rgba(14,22,39,.38);
+  background: none; border: none; cursor: pointer;
+  transition: color .2s ease;
+}
+
+.tray-tab:hover { color: var(--navy); }
+
+/* Línea activa debajo del tab */
+.tray-tab.active {
+  color: var(--navy);
+}
+
+.tray-tab.active::after {
+  content: '';
+  position: absolute; bottom: -1px; left: 0; right: 0;
+  height: 1.5px;
+  background: var(--navy);
+}
+
+
+/* ── PANELES ─────────────────────────────────────────────── */
+
+.tray-panel {
+  display: none;
+  animation: panelIn .28s ease both;
+}
+
+.tray-panel.active { display: block; }
+
+.tray-panel.leaving {
+  display: block;
+  animation: panelOut .18s ease both;
+}
+
+@keyframes panelIn  { from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
+@keyframes panelOut { from{opacity:1; transform:translateY(0)} to{opacity:0; transform:translateY(-6px)} }
+
+
+/* ── TIMELINE — estilo del código de referencia ─────────────
+   Inspirado en el componente TimelineEntry de App.tsx:
+   - Línea vertical sutil a la izquierda (left: 7px)
+   - Dot pequeño 14×14px con borde 2px, relleno o vacío
+   - Contenido directamente sobre el fondo, sin card blanca
+   - pl-8 (2rem) de padding izquierdo para el contenido
+   ────────────────────────────────────────────────────────── */
+
+.tl-wrap {
+  position: relative;
+}
+
+/* Línea vertical — igual al ref: left: 7px */
+.tl-wrap::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: rgba(14,22,39,.12);
+}
+
+/* Ítem: padding izquierdo para que el contenido quede tras el dot */
+.timeline-item {
+  position: relative;
+  padding-left: 2rem;      /* pl-8 del ref (8 × 4px = 2rem) */
+  padding-bottom: 2.5rem;  /* space-y + pb-10 del ref */
+  display: flex;
+  flex-direction: column;
+  /* El dot va en ::before, el figma-frame-timeline ocupa todo el ancho */
+}
+
+/* Dot — 14×14px, borde 2px, igual al ref */
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: .35rem;               /* alineado con la primera línea de texto */
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(14,22,39,.30);
+  background: var(--off-white);  /* color del fondo de la sección */
+  z-index: 2;
+  transition: border-color .25s, background .25s;
+  box-sizing: border-box;
+}
+
+/* Hover sobre el ítem entero */
+.timeline-item:hover .timeline-dot { border-color: var(--mauve); }
+
+/* El wrapper figma-frame-timeline ocupa el ancho disponible */
+.figma-frame-timeline {
+  width: 100%;
+}
+
+/* Card: sin fondo blanco, contenido directo sobre el fondo — como en el ref */
+.timeline-card {
+  flex: 1;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  position: relative;
+}
+
+/* Año */
+.timeline-year {
+  display: block; margin-bottom: .5rem;
+  font-size: .62rem; text-transform: uppercase;
+  letter-spacing: .2em; color: rgba(14,22,39,.38);
+  font-weight: 500; font-family: var(--font-sans);
+}
+
+/* Título — tipografía serif del ref */
+.timeline-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem; font-weight: 500;
+  color: var(--navy); line-height: 1.25;
+  margin-bottom: .3rem;
+}
+
+.timeline-card h3 small {
+  display: block; font-size: .88rem;
+  color: rgba(14,22,39,.58); font-family: var(--font-sans);
+  font-weight: 400; margin-top: .2rem;
+}
+
+/* Institución */
+.timeline-institution {
+  font-size: .8rem; font-weight: 400;
+  color: rgba(14,22,39,.45); margin-top: .15rem;
+}
+
+/* Descripción */
+.timeline-desc {
+  font-size: .82rem; line-height: 1.7;
+  color: rgba(14,22,39,.52); font-weight: 300;
+  margin-top: .6rem; font-family: var(--font-sans);
+}
+
+/* Badge rosado (Distinción Máxima) */
+.tl-badge {
+  display: inline-block; margin-top: .6rem;
+  font-size: .58rem; letter-spacing: .18em;
+  text-transform: uppercase; font-weight: 500;
+  padding: .22rem .7rem; border-radius: 999px;
+  background: var(--blush); color: var(--navy);
+  font-family: var(--font-sans);
+}
+
+/* Sub-etiqueta de sección (Certificados / Cursos) */
+.cert-section-label {
+  font-size: .62rem; text-transform: uppercase;
+  letter-spacing: .2em; font-weight: 500;
+  color: rgba(14,22,39,.32); margin-bottom: 2rem;
+  font-family: var(--font-sans);
+}
+
+
+/* ── FIGMA-FRAME para la timeline ────────────────────────── */
+
+.figma-frame-timeline {
+  position: relative;
+  padding: 6px 8px;
+  margin: -6px -8px;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  transition: border-color .2s ease;
+  display: block;
+}
+
+.figma-frame-timeline:hover { border-color: var(--navy); }
+
+/* Etiqueta sup. izquierda */
+.figma-frame-timeline::before {
+  content: attr(data-label);
+  position: absolute; top: -1.55rem; left: 0;
+  font-family: var(--font-sans); font-size: .54rem; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase;
+  background: var(--off-white); color: var(--navy);
+  padding: .16rem .45rem; border-radius: 3px;
+  border: 1px solid rgba(14,22,39,.12);
+  opacity: 0; transform: translateY(4px);
+  transition: opacity .2s ease, transform .2s ease;
+  white-space: nowrap; pointer-events: none; z-index: 10;
+}
+
+.figma-frame-timeline:hover::before { opacity: 1; transform: translateY(0); }
+
+/* Handle sup. izquierdo */
+.figma-frame-timeline::after {
+  content: ''; position: absolute; top: -3px; left: -3px;
+  width: 6px; height: 6px;
+  background: var(--off-white);
+  border: 1.5px solid var(--navy); border-radius: 1px;
+  opacity: 0; transition: opacity .2s ease;
+  pointer-events: none; z-index: 10;
+}
+
+.figma-frame-timeline:hover::after { opacity: 1; }
+
+
+/* ── HERRAMIENTAS ────────────────────────────────────────── */
+
+.tool-groups { display: flex; flex-direction: column; gap: 2.5rem; }
+
+.tool-cat {
+  font-size: .6rem; text-transform: uppercase;
+  letter-spacing: .22em; font-weight: 500;
+  color: rgba(14,22,39,.32); margin-bottom: .85rem;
+  font-family: var(--font-sans);
+}
+
+.tool-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+/* Pill base */
+.tool-pill {
+  display: inline-block;
+  padding: .55rem 1rem;
+  font-size: .78rem; font-weight: 500;
+  font-family: var(--font-sans);
+  background: white;
+  border: 1px solid rgba(14,22,39,.12);
+  border-radius: .625rem;
+  color: var(--navy);
+  cursor: default;
+  transition: background .2s, border-color .2s, transform .15s;
+}
+
+.tool-pill:hover {
+  background: var(--blush);
+  border-color: rgba(184,147,157,.40);
+  transform: translateY(-2px);
+}
+
+/* Figma-frame en pills: etiqueta + borde navy al hover */
+.figma-frame-skill {
+  position: relative;
+}
+
+.figma-frame-skill::before {
+  content: attr(data-label);
+  position: absolute; top: -1.55rem; left: 0;
+  font-family: var(--font-sans); font-size: .5rem; font-weight: 500;
+  letter-spacing: .12em; text-transform: uppercase;
+  background: var(--blush); color: var(--navy);
+  padding: .15rem .45rem; border-radius: 3px;
+  border: 1px solid rgba(14,22,39,.12);
+  opacity: 0; transform: translateY(4px);
+  transition: opacity .2s ease, transform .2s ease;
+  white-space: nowrap; pointer-events: none; z-index: 20;
+}
+
+.figma-frame-skill:hover::before { opacity: 1; transform: translateY(0); }
+.figma-frame-skill:hover { border-color: var(--navy) !important; }
+
+
+/* ── PREMIOS ─────────────────────────────────────────────── */
+
+.premio-card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background: var(--navy);
+  box-shadow: 0 8px 40px rgba(14,22,39,.20);
+  transition: transform .4s ease, box-shadow .4s ease;
+  position: relative;
+}
+
+.premio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 60px rgba(14,22,39,.28);
+}
+
+.premio-inner { padding: 3rem; }
+
+.premio-header {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.premio-eyebrow {
+  display: block; margin-bottom: .5rem;
+  font-size: .62rem; text-transform: uppercase;
+  letter-spacing: .2em; font-weight: 500;
+  color: rgba(250,247,246,.40); font-family: var(--font-sans);
+}
+
+.premio-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 500; color: var(--off-white); line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+/* Icono de trofeo */
+.premio-trophy {
+  flex-shrink: 0;
+  width: 3rem; height: 3rem; border-radius: 50%;
+  background: var(--blush);
+  display: flex; align-items: center; justify-content: center;
+}
+.premio-trophy svg { stroke: var(--navy); }
+
+.premio-desc {
+  font-size: .88rem; line-height: 1.72; font-weight: 300;
+  color: rgba(250,247,246,.60); margin-bottom: 2rem;
+  max-width: 38rem;
+}
+
+.premio-desc em { font-style: italic; }
+
+/* Badge "Community Choice Winner" — arriba a la derecha, sin icono */
+.premio-badge {
+  display: inline-flex; align-items: center;
+  padding: .32rem .85rem; border-radius: 999px;
+  background: var(--blush);
+  font-size: .58rem; text-transform: uppercase;
+  letter-spacing: .18em; font-weight: 600;
+  color: var(--navy); font-family: var(--font-sans);
+  white-space: nowrap;
+  align-self: flex-start;
+  margin-top: .1rem;
+}
+
+/* ── CTA hover: aparece donde estaba el badge (parte inferior) ──
+   Posición: abajo del párrafo, misma posición que premio-badge
+   pero invisible hasta el hover.
+── */
+.premio-live-cta {
+  /* NO es absolute — fluye después del párrafo */
+  margin-top: 1.5rem;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .3s ease, height .3s ease;
+  pointer-events: none;
+}
+
+.premio-card:hover .premio-live-cta {
+  opacity: 1;
+  height: 2.8rem;   /* altura del botón */
+  pointer-events: all;
+}
+
+.premio-live-btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-family: var(--font-sans); font-size: .7rem;
+  text-transform: uppercase; letter-spacing: .15em; text-decoration: none;
+  background: var(--off-white); color: var(--navy);
+  padding: .7rem 1.4rem; border-radius: 999px;
+  transition: background .3s;
+  white-space: nowrap;
+}
+
+.premio-live-btn:hover { background: var(--blush); }
+
+
+/* Select mobile para tabs */
+.tray-select {
+  display: none;  /* oculto en desktop */
+  width: 100%;
+  background: white;
+  border: 1px solid rgba(14,22,39,.12);
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  font-size: .75rem;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--navy);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%230E1627' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  margin-bottom: 2rem;
+}
+
+/* Premio: fila superior (eyebrow + badge en una línea) */
+.premio-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .75rem;
+  flex-wrap: wrap;
+}
+
+.premio-eyebrow {
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-weight: 500;
+  color: rgba(250,247,246,.40);
+  font-family: var(--font-sans);
+}
+
+/* Eliminar .premio-header ya que se reemplazó por .premio-top-row */
+.premio-header { display: none; }
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 768px) {
+  .tray-section { padding: 6rem 1.25rem 4rem; }
+
+  /* Ocultar tabs desktop, mostrar select */
+  .tray-tabs   { display: none; }
+  .tray-select { display: block; }
+
+  .tray-tab    { padding: .65rem .75rem; font-size: .6rem; }
+  .timeline-card { padding: 1.5rem; }
+
+  /* Premio en mobile: columna */
+  .premio-top-row { flex-direction: column; align-items: flex-start; gap: .4rem; }
+  .premio-inner   { padding: 2rem 1.5rem; }
+  .premio-title   { font-size: 1.4rem; }
+}
+
+
+/* ── Formación: institución en grande (estilo imagen referencia) ── */
+
+.tl-institution-big {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: .4rem;
+  line-height: 1.2;
+}
+
+/* Período con ubicación en itálica */
+.tl-period {
+  font-size: .85rem;
+  color: rgba(14,22,39,.55);
+  margin-bottom: .5rem;
+  font-family: var(--font-sans);
+}
+
+.tl-period em {
+  font-style: italic;
+  color: rgba(14,22,39,.50);
+}
+
+/* Descripción del grado/título */
+.tl-degree {
+  font-size: .88rem;
+  line-height: 1.65;
+  color: rgba(14,22,39,.65);
+  font-family: var(--font-sans);
+}
+
+.tl-degree em {
+  font-style: italic;
+}
+
+/* ── Certificados: card como enlace ── */
+
+.cert-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.cert-link .cert-header-row { order: 0; }
+.cert-link .tl-meta-block { order: 1; margin: .2rem 0 .35rem 0; }
+.cert-link .tl-cargo { order: 2; margin: 0 0 .4rem 0; }
+.cert-link .cert-open-hint { order: 3; }
+
+.cert-link:hover {
+  background: rgba(14,22,39,.02);
+  border-radius: 6px;
+}
+
+/* Hint "Ver certificado ↗" — aparece al hover */
+.cert-open-hint {
+  display: block;
+  margin-top: .3rem;
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: var(--mauve);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.cert-link:hover .cert-open-hint {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* El frame Figma también reacciona cuando la card es link */
+.figma-frame-timeline:has(.cert-link:hover) {
+  border-color: var(--navy);
+}
+
+
+/* ── Dot activo (rosado) — para el puesto actual ── */
+.timeline-dot--active {
+  border-color: var(--mauve);
+  background: var(--mauve);
+}
+.timeline-dot--active::after {
+  background: white;
+}
+.tl-item--active:hover .timeline-dot--active {
+  border-color: var(--mauve);
+  background: var(--mauve);
+  box-shadow: 0 0 0 4px rgba(184,147,157,.18);
+}
+
+/* ── Badge "Actualidad" rosado ── */
+.tl-header-row {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  margin-bottom: .35rem;
+  flex-wrap: wrap;
+}
+
+.tl-badge-active {
+  display: inline-flex;
+  align-items: center;
+  padding: .18rem .7rem;
+  border-radius: 999px;
+  background: rgba(184,147,157,.15);
+  border: 1px solid rgba(184,147,157,.35);
+  color: var(--mauve);
+  font-size: .58rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-family: var(--font-sans);
+  white-space: nowrap;
+  /* pulso suave para llamar la atención */
+  animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .6; }
+}
+
+/* ── Layout de rol + fecha ── */
+/* Fila: nombre del rol | tag fecha | ubicación */
+.tl-role-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: .6rem;
+}
+
+/* Nombre del rol: bold, negro */
+.tl-role-name {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--navy);
+  font-family: var(--font-sans);
+}
+
+/* Tag de fecha: píldora con fondo muy sutil, diferencia visual clara */
+.tl-date-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: .15rem .6rem;
+  border-radius: 999px;
+  background: rgba(14,22,39,.06);
+  border: 1px solid rgba(14,22,39,.12);
+  font-size: .65rem;
+  font-weight: 500;
+  color: rgba(14,22,39,.55);
+  font-family: var(--font-sans);
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+/* Ubicación: texto muy suave */
+.tl-location {
+  font-size: .72rem;
+  color: rgba(14,22,39,.38);
+  font-family: var(--font-sans);
+}
+
+/* Fecha inline dentro del texto (ej. "(Feb 2025)") */
+.tl-date-inline {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 500;
+  color: rgba(14,22,39,.50);
+  font-family: var(--font-sans);
+}
+
+/* ── Header de certificado: institución en grande + fecha ── */
+.cert-header-row {
+  margin-bottom: .2rem;
+}
+
+/* Institución más compacta en certificados */
+.cert-issuer {
+  font-size: 1.2rem;
+  margin-bottom: .1rem;
+}
+
+
+/* ── Badge "Actualidad" posicionado ENCIMA de la card ── */
+.tl-above-badge {
+  /* Aparece antes del .timeline-item en el flujo */
+  padding-left: 2rem; /* alineado con el contenido principal de Rompecabeza */
+  margin-bottom: .5rem;
+}
+
+/* ── Layout vertical: meta-block (fecha + ubicación) ── */
+/* Reemplaza tl-role-row: ahora fecha va debajo de institución */
+.tl-meta-block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: .35rem 0 .55rem;
+}
+
+/* ── Cargo: texto principal debajo de la fecha, muy visible ── */
+.tl-cargo {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--navy);
+  font-family: var(--font-sans);
+  margin-bottom: .6rem;
+  line-height: 1.3;
+}
+
+/* ── Sub-entrada (Socovesa dentro de Rompecabeza) ── */
+.tl-sub-entry {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(14,22,39,.07);
+}
+
+.tl-sub-institution {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: .25rem;
+}
+
+/* ── Enlace de institución: hover rosado ── */
+.tl-institution-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  transition: color .2s ease;
+}
+
+.tl-institution-link:hover .tl-institution-big {
+  color: var(--mauve);
+}
+
+/* Flecha sutil que aparece al hover */
+.tl-institution-link .tl-institution-big::after {
+  content: ' ↗';
+  font-size: .7em;
+  opacity: 0;
+  transition: opacity .2s ease;
+  color: var(--mauve);
+  font-family: var(--font-sans);
+}
+
+.tl-institution-link:hover .tl-institution-big::after {
+  opacity: 1;
+}
+
+/* ── Badge genérico (tl-badge para Distinción Máxima) ── */
+.tl-badge {
+  display: inline-block;
+  margin-top: .35rem;
+  font-size: .58rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: .22rem .7rem;
+  border-radius: 999px;
+  background: var(--blush);
+  color: var(--navy);
+  font-family: var(--font-sans);
+}

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+
+  <title>SO-I | Caso de Estudio · Mariajosé Mendoza</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/detalle-proyectos.css">
+
+  <!-- Estilos embed — igual que Hera -->
+  <style>
+    .figma-embed-wrap {
+      position: relative;
+      width: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #f0f0f0;
+      aspect-ratio: 16 / 9;
+    }
+    .figma-embed-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .figma-caption {
+      margin-top: .75rem;
+      font-size: .8rem;
+      color: var(--mauve);
+      font-family: var(--font-sans);
+    }
+    /* Canva embed proporcional */
+    .canva-embed-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #f0f0f0;
+      margin-bottom: 0.5rem;
+    }
+    .canva-embed-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER — "Trabajos" active
+===================================================== -->
+<header id="site-header" class="site-header scrolled">
+
+  <a href="index.html" class="header-logo">MML.</a>
+
+  <nav class="header-nav">
+    <a href="index.html">Sobre mí</a>
+    <a href="experiencia.html">Trayectoria</a>
+    <a href="proyectos.html" class="active">Trabajos</a>
+  </nav>
+
+  <a href="assets/pdf/CV-Mariajose-Mendoza.pdf" class="header-cta" download>
+    Descargar CV
+  </a>
+
+</header>
+
+<!-- Navegación mobile -->
+<nav class="mobile-nav">
+  <a href="index.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="8" r="4"/>
+      <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/>
+    </svg>
+    Sobre mí
+  </a>
+  <a href="experiencia.html">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect x="4" y="2" width="16" height="20" rx="2"/>
+      <line x1="8" y1="8" x2="16" y2="8"/>
+    </svg>
+    Trayectoria
+  </a>
+  <a href="proyectos.html" class="active">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="7" width="20" height="14" rx="2"/>
+      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+    </svg>
+    Trabajos
+  </a>
+</nav>
+
+
+<!-- =====================================================
+     BOTÓN VOLVER A TRABAJOS
+===================================================== -->
+<a href="proyectos.html" class="back-btn">← Volver a Trabajos</a>
+
+
+<!-- =====================================================
+     HERO DEL CASO
+===================================================== -->
+<section class="case-hero">
+
+  <div class="case-hero-img">
+    <!-- [REEMPLAZAR src con imagen hero de SO-I] -->
+    <img
+      src="assets/img/soi/hero-soi.jpg"
+      alt="SO-I — aplicación móvil"
+    >
+  </div>
+
+  <div class="case-hero-overlay"></div>
+
+  <div class="case-hero-content">
+
+    <div class="case-hero-badges">
+      <span class="case-badge-pill">Aplicación Móvil</span>
+      <span class="case-badge-year">2024</span>
+    </div>
+
+    <h1>SO-I</h1>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CUERPO DEL CASO DE ESTUDIO
+===================================================== -->
+<div class="case-body">
+
+  <!-- CONTEXTO -->
+  <div class="case-row">
+
+    <h2 class="u-label">Contexto</h2>
+
+    <div class="context-grid">
+
+      <div class="context-item">
+        <span>Tipo</span>
+        <strong>Proyecto de Título — Universidad del Desarrollo</strong>
+      </div>
+
+      <div class="context-item">
+        <span>Profesores guía</span>
+        <strong>Mauricio Reyes · Darío Osorio</strong>
+      </div>
+
+      <div class="context-item">
+        <span>Rol</span>
+        <strong>Investigación, UX/UI y Desarrollo de Marca — Mariajosé Mendoza</strong>
+      </div>
+
+      <div class="context-item">
+        <span>Año</span>
+        <strong>2024</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- DESCRIPCIÓN -->
+  <div class="case-row">
+
+    <h2 class="u-label">Descripción</h2>
+
+    <p class="problem-text">
+      En Chile hay 179.268 personas con sordera total. Para esta comunidad,
+      comunicarse con el mundo oyente depende de la disponibilidad de
+      intérpretes de Lengua de Señas Chilena (LSCH) — un recurso escaso,
+      difícil de acceder en situaciones cotidianas y prácticamente
+      inexistente en emergencias. SO-I es una aplicación móvil que conecta
+      a personas Sordas con intérpretes certificados en tiempo real,
+      clasificados por ámbito temático y disponibilidad, permitiendo
+      también agendar llamadas y acceder a servicios de emergencia con
+      interpretación simultánea.
+    </p>
+
+  </div>
+
+ <!-- METODOLOGÍA — imagen diagrama_ux.png -->
+  <div class="case-row">
+
+    <h2 class="u-label">Metodología</h2>
+
+    <div>
+
+      <p class="definition-text" style="margin-bottom:2rem;">
+        El proyecto se desarrolló bajo una metodología de doble diamante:
+        una primera fase de investigación y definición del problema, y una
+        segunda de desarrollo de la solución y entrega del prototipo validado.
+      </p>
+
+      <img
+        src="assets/img/soi/diagrama_ux.png"
+        alt="Metodología doble diamante — SO-I"
+        style="width:100%; border-radius:var(--radius); display:block;"
+        loading="lazy"
+      >
+
+    </div>
+
+  </div>
+
+  <!-- INVESTIGACIÓN — sin fotos -->
+  <div class="case-row">
+
+    <h2 class="u-label">Investigación</h2>
+
+    <p class="definition-text">
+      Se realizaron 22 entrevistas a miembros de la Comunidad Sorda,
+      intérpretes de LSCH, fonoaudiólogos y fundaciones. Los hallazgos
+      confirmaron que la falta de intérpretes en servicios públicos y
+      situaciones de emergencia representa una barrera crítica — desde
+      no poder comunicarse en una consulta médica hasta no poder llamar
+      al 133 en una emergencia. A partir de esto se construyeron tres
+      User Personas: la persona Sorda, la oyente y el intérprete.
+    </p>
+
+  </div>
+
+  <!-- WIREFRAMES -->
+  <div class="case-row">
+
+    <h2 class="u-label">Wireframes</h2>
+
+    <div>
+      <p class="definition-text" style="margin-bottom: 1.5rem;">
+        Los wireframes estructuraron cada pantalla de la aplicación,
+        enfocándose en la accesibilidad y simplicidad de uso para personas
+        Sordas antes de aplicar el sistema visual.
+      </p>
+      <div class="figma-embed-wrap">
+        <iframe
+          src="https://embed.figma.com/proto/tcRH2Ikr27Nb6XZ1MnsRuk/wireframes---so-i?node-id=5002-3522&node-type=canvas&scaling=scale-down&content-scaling=responsive&page-id=19%3A13735&embed-host=share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="figma-caption">Wireframes — estructura base de la aplicación</p>
+    </div>
+
+  </div>
+
+  <!-- SISTEMA DE DISEÑO -->
+  <div class="case-row">
+
+    <h2 class="u-label">Sistema de Diseño</h2>
+
+    <div>
+      <p class="definition-text" style="margin-bottom:1.5rem;">
+        Se desarrolló un sistema de diseño completo — paleta, tipografía
+        Inter y componentes — que asegura contraste y legibilidad para
+        usuarios Sordos. El azul #172983 como color primario se eligió por
+        su conexión directa con el simbolismo de la Comunidad Sorda.
+      </p>
+      <div class="canva-embed-wrap">
+        <iframe
+          loading="lazy"
+          src="https://www.canva.com/design/DAGTBnQPyA8/SqZDdC_FvfWmp70MopReww/view?embed"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="figma-caption">Sistema de Diseño — resumen visual</p>
+    </div>
+
+  </div>
+
+  <!-- UI KIT -->
+  <div class="case-row">
+
+    <h2 class="u-label">UI Kit</h2>
+
+    <div>
+      <p class="definition-text" style="margin-bottom:1.5rem;">
+        El UI Kit incluyó botones, calendarios, cards y todos los componentes
+        necesarios para garantizar consistencia en toda la plataforma.
+      </p>
+      <div class="canva-embed-wrap">
+        <iframe
+          loading="lazy"
+          src="https://www.canva.com/design/DAGTB75If_A/P1g_EANU5cwZHVkNW9MnBQ/view?embed"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="figma-caption">UI Kit — componentes de la aplicación</p>
+    </div>
+
+  </div>
+
+  <!-- APLICACIÓN DEL SISTEMA DE DISEÑO -->
+  <div class="case-row">
+
+    <h2 class="u-label">Aplicación del<br>Sistema de Diseño</h2>
+
+    <div>
+
+      <p class="definition-text" style="margin-bottom:2rem;">
+        Con el sistema de diseño definido, lo apliqué a los wireframes,
+        transformando las estructuras básicas en prototipos visuales.
+        Para asegurar la comprensión total de la Comunidad Sorda,
+        implementé más de 20 videos en Lengua de Señas Chilena (LSCh)
+        en todas las pantallas de la aplicación. Esto fue fundamental
+        para que los usuarios se sintieran acompañados y comprendidos
+        durante toda la interacción con la plataforma.
+      </p>
+
+      <!-- Cuatro phones en grilla 2x2 -->
+      <div class="img-grid img-grid--2" style="margin-top:2rem;">
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="browser-body">
+              <!-- [REEMPLAZAR src con pantalla inicio SO-I] -->
+              <img src="assets/img/soi/app-home.jpg" alt="SO-I — inicio">
+            </div>
+          </div>
+          <p class="frame-caption" style="text-align:center;">Inicio — registro e inicio sesión</p>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="browser-body">
+              <!-- [REEMPLAZAR src con pantalla llamada SO-I] -->
+              <img src="assets/img/soi/app-llamada.jpg" alt="SO-I — llamada">
+            </div>
+          </div>
+          <p class="frame-caption" style="text-align:center;">Home — pantalla de inicio con los 3 servicios</p>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="browser-body">
+              <!-- [REEMPLAZAR src con pantalla emergencia SO-I] -->
+              <img src="assets/img/soi/app-emergencia.jpg" alt="SO-I — emergencia">
+            </div>
+          </div>
+          <p class="frame-caption" style="text-align:center;">Intérprete — encontrar intérprete según la región</p>
+        </div>
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="browser-body">
+              <!-- [REEMPLAZAR src con pantalla agendar SO-I] -->
+              <img src="assets/img/soi/app-agendar.jpg" alt="SO-I — agendar">
+            </div>
+          </div>
+          <p class="frame-caption" style="text-align:center;">Llamada — conexión con intérprete</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- TESTEO Y VALIDACIÓN — carrusel más pequeño -->
+  <div class="case-row">
+
+    <h2 class="u-label">Testeo y<br>Validación</h2>
+
+    <div>
+
+      <p class="definition-text" style="margin-bottom:2rem;">
+        Se realizaron dos rondas de testeo con miembros de la Comunidad
+        Sorda, oyentes e intérpretes. La puntuación promedio en utilidad
+        de servicios fue <strong>9,67/10</strong> y en claridad de
+        información <strong>9,67/10</strong>. El <strong>100% de los
+        participantes Sordos</strong> respondió que utilizaría la aplicación.
+      </p>
+
+      <!-- Carrusel de testeo -->
+      <div style="position:relative; overflow:hidden; border-radius:var(--radius);">
+
+        <!-- Track de imágenes -->
+        <div id="testeo-track" style="display:flex; transition:transform .4s ease; will-change:transform;">
+          <div style="min-width:100%; max-width:100%;">
+            <img src="assets/img/soi/testeo-1.jpg" alt="Testeo — Comunidad Sorda"
+              style="width:100%; max-height:520px; object-fit:contain; border-radius:var(--radius); border:1px solid rgba(14,22,39,.08); display:block;">
+          </div>
+          <div style="min-width:100%; max-width:100%;">
+            <img src="assets/img/soi/testeo-2.jpg" alt="Testeo — padres oyentes"
+              style="width:100%; max-height:520px; object-fit:contain; border-radius:var(--radius); border:1px solid rgba(14,22,39,.08); display:block;">
+          </div>
+          <div style="min-width:100%; max-width:100%;">
+            <img src="assets/img/soi/testeo-3.jpg" alt="Testeo — intérpretes"
+              style="width:100%; max-height:520px; object-fit:contain; border-radius:var(--radius); border:1px solid rgba(14,22,39,.08); display:block;">
+          </div>
+          <div style="min-width:100%; max-width:100%;">
+            <img src="assets/img/soi/testeo-4.jpg" alt="Testeo — docentes UDD"
+              style="width:100%; max-height:520px; object-fit:contain; border-radius:var(--radius); border:1px solid rgba(14,22,39,.08); display:block;">
+          </div>
+        </div>
+
+        <!-- Botón anterior -->
+        <button onclick="moverTesteo(-1)" style="
+          position:absolute; top:50%; left:12px; transform:translateY(-50%);
+          background:white; border:1px solid rgba(14,22,39,.12); border-radius:50%;
+          width:40px; height:40px; cursor:pointer; font-size:16px;
+          display:flex; align-items:center; justify-content:center;
+          box-shadow:0 2px 8px rgba(0,0,0,.1); z-index:2;
+        ">←</button>
+
+        <!-- Botón siguiente -->
+        <button onclick="moverTesteo(1)" style="
+          position:absolute; top:50%; right:12px; transform:translateY(-50%);
+          background:white; border:1px solid rgba(14,22,39,.12); border-radius:50%;
+          width:40px; height:40px; cursor:pointer; font-size:16px;
+          display:flex; align-items:center; justify-content:center;
+          box-shadow:0 2px 8px rgba(0,0,0,.1); z-index:2;
+        ">→</button>
+
+      </div>
+
+      <!-- Indicadores de puntos -->
+      <div style="display:flex; justify-content:center; gap:8px; margin-top:1rem;">
+        <button onclick="irTesteo(0)" id="dot-0" style="width:8px;height:8px;border-radius:50%;background:#172983;border:none;cursor:pointer;padding:0;"></button>
+        <button onclick="irTesteo(1)" id="dot-1" style="width:8px;height:8px;border-radius:50%;background:#d0d5e8;border:none;cursor:pointer;padding:0;"></button>
+        <button onclick="irTesteo(2)" id="dot-2" style="width:8px;height:8px;border-radius:50%;background:#d0d5e8;border:none;cursor:pointer;padding:0;"></button>
+        <button onclick="irTesteo(3)" id="dot-3" style="width:8px;height:8px;border-radius:50%;background:#d0d5e8;border:none;cursor:pointer;padding:0;"></button>
+      </div>
+
+      <p class="figma-caption" id="testeo-caption" style="text-align:center; margin-top:.5rem;">Testeo — Comunidad Sorda</p>
+
+    </div>
+
+  </div>
+
+  <!-- Script del carrusel -->
+  <script>
+    (function() {
+      var actual = 0;
+      var total = 4;
+      var direccion = 1;
+      var captions = [
+        'Testeo — Comunidad Sorda',
+        'Testeo — padres oyentes',
+        'Testeo — intérpretes LSCH',
+        'Testeo — docentes UDD'
+      ];
+      var testeoTimer = null;
+
+      function actualizarCarrusel() {
+        document.getElementById('testeo-track').style.transform = 'translateX(-' + (actual * 100) + '%)';
+        document.getElementById('testeo-caption').textContent = captions[actual];
+        for (var i = 0; i < total; i++) {
+          document.getElementById('dot-' + i).style.background = i === actual ? '#172983' : '#d0d5e8';
+        }
+      }
+
+      function iniciarLoopTesteo() {
+        clearInterval(testeoTimer);
+        testeoTimer = setInterval(function() {
+          if (actual >= total - 1) {
+            direccion = -1;
+          } else if (actual <= 0) {
+            direccion = 1;
+          }
+
+          actual += direccion;
+          actualizarCarrusel();
+        }, 2600);
+      }
+
+      window.moverTesteo = function(dir) {
+        actual = (actual + dir + total) % total;
+        if (actual === 0) {
+          direccion = 1;
+        } else if (actual === total - 1) {
+          direccion = -1;
+        }
+        actualizarCarrusel();
+        iniciarLoopTesteo();
+      };
+
+      window.irTesteo = function(idx) {
+        actual = idx;
+        direccion = idx === 0 ? 1 : (idx === total - 1 ? -1 : direccion);
+        actualizarCarrusel();
+        iniciarLoopTesteo();
+      };
+
+      iniciarLoopTesteo();
+    })();
+  </script>
+
+  <!-- VIDEO RESUMEN -->
+  <div class="case-row">
+
+    <h2 class="u-label">Video Resumen</h2>
+
+    <div>
+      <p class="definition-text" style="margin-bottom:1.5rem;">
+        Resumen audiovisual del proceso completo de SO-I: investigación,
+        diseño, testeo y propuesta formal.
+      </p>
+      <div class="canva-embed-wrap">
+        <iframe
+          loading="lazy"
+          src="https://www.canva.com/design/DAGTCEHYF0Y/SHi-w09j3Wq9f1_EOlQyDA/view?embed"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ¿CÓMO FUNCIONA SO-I? — 3 embeds Canva por servicio -->
+  <div class="case-row">
+
+    <h2 class="u-label">¿Cómo funciona<br>SO-I?</h2>
+
+    <div>
+
+      <p class="definition-text" style="margin-bottom:2rem;">
+        Cada usuario deberá registrarse para acceder a los 3 servicios
+        de SO-I. En la sección para personas Sordas, todo el proceso de
+        registro y la explicación de los servicios están en Lengua de
+        Señas Chilena para facilitar la comprensión.
+      </p>
+
+      <!-- Llamar al Intérprete -->
+      <div style="margin-bottom:2.5rem;">
+        <div class="process-list" style="margin-bottom:1.5rem;">
+          <div class="process-row">
+            <span class="process-label">Llamar al Intérprete</span>
+            <span class="process-value">
+              Las personas Sordas podrán solicitar un intérprete
+              dependiendo de la disponibilidad, ubicación y el tema.
+              La aplicación encontrará al intérprete más adecuado
+              según estos parámetros, asegurando una comunicación efectiva.
+            </span>
+          </div>
+        </div>
+        <div class="canva-embed-wrap">
+          <iframe
+            loading="lazy"
+            src="https://www.canva.com/design/DAHSZZWEg8I/nz-IphSS3oLA7OH6Mx2kow/view?embed"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="figma-caption">Flujo — Llamar al Intérprete</p>
+      </div>
+
+      <!-- Agendar Llamadas -->
+      <div style="margin-bottom:2.5rem;">
+        <div class="process-list" style="margin-bottom:1.5rem;">
+          <div class="process-row">
+            <span class="process-label">Agendar Llamadas</span>
+            <span class="process-value">
+              Permite a la Comunidad Sorda programar una llamada con
+              un intérprete para un momento específico. Se puede elegir
+              al intérprete según el tema y su disponibilidad, facilitando
+              la planificación y asegurando que haya uno disponible
+              cuando se necesite.
+            </span>
+          </div>
+        </div>
+        <div class="canva-embed-wrap">
+          <iframe
+            loading="lazy"
+            src="https://www.canva.com/design/DAHSZezBBnM/r4w0BJPmgGphHIozjAwMFA/view?embed"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="figma-caption">Flujo — Agendar Llamadas</p>
+      </div>
+
+      <!-- Llamadas de Emergencia -->
+      <div>
+        <div class="process-list" style="margin-bottom:1.5rem;">
+          <div class="process-row">
+            <span class="process-label">Llamadas de Emergencia</span>
+            <span class="process-value">
+              En situaciones de emergencia, los usuarios podrán conectarse
+              rápidamente con servicios de Ambulancia, Bomberos, Carabineros
+              y PDI a través de una videollamada, garantizando que siempre
+              haya intérpretes disponibles para asistir.
+            </span>
+          </div>
+        </div>
+        <div class="canva-embed-wrap">
+          <iframe
+            loading="lazy"
+            src="https://www.canva.com/design/DAHSZahyUs4/ig1unwIerhayVAgjJvIgCQ/view?embed"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="figma-caption">Flujo — Llamadas de Emergencia</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- DESARROLLO EN FLUTTER — imagen estática -->
+  <div class="case-row">
+
+    <h2 class="u-label">Desarrollo en<br>Flutter</h2>
+
+    <div>
+      <p class="definition-text" style="margin-bottom:1.5rem;">
+        Además del prototipo en Figma, se desarrolló un segundo prototipo
+        funcional en Flutter — el framework multiplataforma de Google.
+        La funcionalidad más relevante implementada fue la de videollamadas
+        en tiempo real con intérpretes de LSCH, validando la viabilidad
+        técnica del servicio principal de SO-I.
+      </p>
+      <!-- Imagen de Flutter subida por la usuaria -->
+      <img
+        src="assets/img/soi/flutter.png"
+        alt="Desarrollo en Flutter — SO-I"
+        style="width:100%; border-radius:var(--radius); border:1px solid rgba(14,22,39,.08);"
+        loading="lazy"
+      >
+      <p class="figma-caption">Prototipo funcional en Flutter — videollamadas en tiempo real</p>
+    </div>
+
+  </div>
+
+  <!-- INCUBA UDD -->
+  <div class="case-row">
+
+    <h2 class="u-label">Incuba UDD</h2>
+
+    <p class="definition-text">
+      SO-I fue seleccionado para participar en Incuba UDD, el programa de
+      emprendimiento de la Universidad del Desarrollo basado en metodología
+      Lean Startup. El proyecto avanzó con éxito hasta la última etapa de
+      crecimiento del programa, presentándose ante una comisión evaluadora
+      en junio de 2024 en la categoría ideas/prototipos.
+    </p>
+
+  </div>
+
+  <!-- HERRAMIENTAS -->
+  <div class="case-row">
+
+    <h2 class="u-label">Herramientas</h2>
+
+    <div class="tools-list">
+      <span class="tool-pill">Figma</span>
+      <span class="tool-pill">Illustrator</span>
+      <span class="tool-pill">Flutter</span>
+      <span class="tool-pill">Microsoft Forms</span>
+    </div>
+
+  </div>
+
+  <!-- PROTOTIPO INTERACTIVO — igual que Hera -->
+  <div class="case-row">
+
+    <h2 class="u-label">Prototipo<br>Interactivo</h2>
+
+    <div>
+      <p class="definition-text" style="margin-bottom: 1.5rem;">
+        El prototipo incluye los flujos principales de la aplicación:
+        solicitud de intérprete, llamada de emergencia y agendamiento —
+        con transiciones y estados tal como fueron diseñados.
+      </p>
+      <div class="figma-embed-wrap">
+        <iframe
+          src="https://embed.figma.com/proto/cZTVEEBaFUDZ6uB2l8dwOo/7.0-Aplicaci%C3%B3n-SO-I?node-id=888-2362&node-type=canvas&scaling=scale-down&content-scaling=fixed&page-id=19%3A11457&starting-point-node-id=888%3A2362&embed-host=share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="figma-caption">Prototipo interactivo — flujos diseñados en Figma</p>
+    </div>
+
+  </div>
+
+  <!-- MEMORIA DE TÍTULO -->
+  <div class="case-row" style="border-top: none;">
+
+    <div><!-- columna vacía del label --></div>
+
+    <div class="live-card">
+
+      <div class="live-card-content">
+
+        <p class="live-card-eyebrow">Documento Académico</p>
+
+        <h3>Memoria de Título</h3>
+
+        <p>
+          Investigación completa del proyecto: marco teórico, metodología,
+          entrevistas, testeo con la Comunidad Sorda y propuesta formal.
+        </p>
+
+           
+        <a  href="assets/pdf/MemoriaFinal_MariajoseMendoza.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="live-card-btn"
+        >
+          Leer memoria ↗
+        </a>
+
+      </div>
+
+      <div class="live-card-thumb">
+        <!-- [REEMPLAZAR src con imagen mockup SO-I] -->
+        <img
+          src="assets/img/soi/soiproducto.jpg"
+          alt="SO-I — memoria de título"
+          loading="lazy"
+        >
+      </div>
+
+    </div>
+
+  </div>
+
+</div><!-- /case-body -->
+
+<!-- FOOTER -->
+<footer class="site-footer site-footer--navy">
+  <div class="footer-top">
+    <span class="footer-logo-text">MML.</span>
+    <a href="mailto:cote.mendozalp@gmail.com" class="footer-email-pill">
+      cote.mendozalp@gmail.com
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Mariajosé Mendoza Lopetegui</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/mariajose-mendoza-lopetegui/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <span class="footer-sep">·</span>
+      <span class="footer-location">Santiago, Chile</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JS -->
+<script src="js/main.js"></script>
+<script src="js/animations.js"></script>
+
+</body>
+</html>

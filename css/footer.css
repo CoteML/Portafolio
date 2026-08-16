@@ -148,3 +148,63 @@
   letter-spacing: .12em;
   color: rgba(250, 247, 246, .25);
 }
+
+/* Espacio extra en mobile para que el dock inferior no tape el footer */
+@media (max-width: 768px) {
+  .site-footer {
+    padding-bottom: 5.5rem; /* suficiente para dejar espacio sobre el mobile dock */
+  }
+  /* Mobile: align logo, icon and email to the left (same left padding as .footer-top)
+     Show icon to the left of the email pill (not centered). */
+  .footer-top {
+    align-items: flex-start;
+  }
+  .footer-linkedin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 .6rem 0 0;
+    color: rgba(250,247,246,.85);
+    text-decoration: none;
+  }
+  .footer-email-pill {
+    display: inline-flex;
+    margin: 0;
+  }
+}
+
+/* LinkedIn icon next to email on desktop (icon left, email in original place) */
+.footer-linkedin {
+  display: inline-flex;
+  align-items: center;
+  margin-right: .6rem;
+  color: rgba(250,247,246,.6);
+  text-decoration: none;
+}
+
+.footer-linkedin svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  transition: transform .18s ease, color .18s ease;
+  fill: currentColor;
+}
+
+.footer-linkedin:hover {
+  color: var(--mauve);
+}
+
+/* Group for icon + email so they act as a single unit in the footer */
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+@media (min-width: 640px) {
+  /* On desktop, ensure contact group sits flush to the right in .footer-top
+     and doesn't create a centered element. */
+  .footer-top .footer-contact {
+    margin-left: auto;
+  }
+}

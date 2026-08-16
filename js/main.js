@@ -76,3 +76,74 @@ function insertLinkedInIcon() {
 }
 
 document.addEventListener('DOMContentLoaded', insertLinkedInIcon);
+
+/* ==========================================================
+   FAVICON — garantizar que se muestre en navegadores que ignoran
+   links con media, usando data URI SVG como fallback y respondiendo
+   a cambios de tema.
+   ========================================================== */
+
+function setFavicon() {
+  try {
+    var svgLight = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100"><rect width="120" height="100" fill="transparent"/><text x="60" y="55" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#0E1627">MML.</text></svg>';
+    var svgDark = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100"><rect width="120" height="100" fill="transparent"/><text x="60" y="55" text-anchor="middle" dominant-baseline="middle" font-family="Georgia, serif" font-size="40" font-weight="700" fill="#FAF7F6">MML.</text></svg>';
+
+    function updateLinks(svg) {
+      var dataSvg = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+
+      var links = document.querySelectorAll('link[rel~="icon"]');
+      if (!links || links.length === 0) {
+        var fallback = document.createElement('link');
+        fallback.rel = 'icon';
+        document.head.appendChild(fallback);
+        links = [fallback];
+      }
+
+      links.forEach(function(link) {
+        try { link.href = dataSvg; } catch (e) { /* ignore */ }
+      });
+
+      // Also create/update a PNG fallback by drawing the SVG onto a canvas
+      var img = new Image();
+      img.onload = function() {
+        try {
+          var size = 64;
+          var canvas = document.createElement('canvas');
+          canvas.width = size;
+          canvas.height = size;
+          var ctx = canvas.getContext('2d');
+          ctx.clearRect(0, 0, size, size);
+          ctx.drawImage(img, 0, 0, size, size);
+          var png = canvas.toDataURL('image/png');
+
+          var pngLink = Array.from(document.querySelectorAll('link[rel~="icon"][type="image/png"]'))[0];
+          if (!pngLink) {
+            pngLink = document.createElement('link');
+            pngLink.rel = 'icon';
+            pngLink.type = 'image/png';
+            pngLink.sizes = '32x32';
+            document.head.appendChild(pngLink);
+          }
+          pngLink.href = png;
+        } catch (e) { /* ignore canvas failures */ }
+      };
+      img.onerror = function() { /* ignore */ };
+      img.src = dataSvg;
+    }
+
+    var useDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Use the 'light' favicon when the user has dark theme (so it appears bright on dark backgrounds)
+    updateLinks(useDark ? svgLight : svgDark);
+
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var listener = function(e) { updateLinks(e.matches ? svgLight : svgDark); };
+      if (mq.addEventListener) mq.addEventListener('change', listener);
+      else if (mq.addListener) mq.addListener(listener);
+    }
+  } catch (err) {
+    console.warn('Could not set favicon dynamically', err);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', setFavicon);

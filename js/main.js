@@ -133,11 +133,11 @@ function setFavicon() {
 
     var useDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     // Use the 'light' favicon when the user has dark theme (so it appears bright on dark backgrounds)
-    updateLinks(useDark ? svgLight : svgDark);
+    updateLinks(useDark ? svgDark : svgLight);
 
     if (window.matchMedia) {
       var mq = window.matchMedia('(prefers-color-scheme: dark)');
-      var listener = function(e) { updateLinks(e.matches ? svgLight : svgDark); };
+      var listener = function(e) { updateLinks(e.matches ? svgDark : svgLight); };
       if (mq.addEventListener) mq.addEventListener('change', listener);
       else if (mq.addListener) mq.addListener(listener);
     }

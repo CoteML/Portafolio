@@ -185,12 +185,23 @@
 
 /* Badge rosado (Distinción Máxima) */
 .tl-badge {
-  display: inline-block; margin-top: .6rem;
-  font-size: .58rem; letter-spacing: .18em;
-  text-transform: uppercase; font-weight: 500;
-  padding: .22rem .7rem; border-radius: 999px;
-  background: var(--blush); color: var(--navy);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .6rem;
+  font-size: .58rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: .22rem .7rem;
+  border-radius: 999px;
+  background: var(--blush);
+  color: var(--navy);
   font-family: var(--font-sans);
+  line-height: 1.2;
+  white-space: nowrap;
+  width: fit-content;
+  max-width: 100%;
 }
 
 /* Sub-etiqueta de sección (Certificados / Cursos) */
@@ -515,10 +526,11 @@
   transition: background .2s ease;
 }
 
-.cert-link .cert-header-row { order: 0; }
-.cert-link .tl-meta-block { order: 1; margin: .2rem 0 .35rem 0; }
-.cert-link .tl-cargo { order: 2; margin: 0 0 .4rem 0; }
-.cert-link .cert-open-hint { order: 3; }
+.cert-link .cert-course-title { order: 0; margin: 0 0 .35rem 0; }
+.cert-link .tl-meta-block { order: 1; margin: 0 0 .35rem 0; }
+.cert-link .cert-platform { order: 2; margin-top: .1rem; }
+.cert-link .tl-badge { order: 3; margin-top: .7rem; margin-bottom: .15rem; }
+.cert-link .cert-open-hint { order: 4; }
 
 .cert-link:hover {
   background: rgba(14,22,39,.02);
@@ -646,7 +658,26 @@
   color: rgba(14,22,39,.50);
   font-family: var(--font-sans);
 }
+/* Título principal del certificado */
+.cert-course-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 .35rem 0;
+}
 
+/* Plataforma en etiqueta secundaria */
+.cert-platform {
+  margin: 0;
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-weight: 500;
+  color: var(--navy);
+  font-family: var(--font-sans);
+}
 /* ── Header de certificado: institución en grande + fecha ── */
 .cert-header-row {
   margin-bottom: .2rem;

@@ -1,0 +1,114 @@
+.not-found-page {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1.5rem 1rem;
+}
+
+.not-found-shell {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  padding: 2.2rem 2rem 2.5rem;
+  border: 1px solid rgba(14, 22, 39, 0.08);
+  background: rgba(250, 247, 246, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px rgba(14, 22, 39, 0.06);
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.not-found-code {
+  font-family: var(--font-serif);
+  font-size: clamp(4rem, 9vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  color: var(--navy);
+  margin: 0.5rem 0 0.8rem;
+}
+
+.not-found-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.8rem;
+}
+
+.not-found-text {
+  max-width: 520px;
+  margin: 0 auto 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(14, 22, 39, 0.7);
+  font-family: var(--font-sans);
+  margin-top: auto;
+}
+
+.not-found-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.not-found-primary,
+.not-found-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.not-found-primary {
+  background: var(--navy);
+  color: var(--off-white);
+  border: 1px solid var(--navy);
+}
+
+.not-found-secondary {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid rgba(14, 22, 39, 0.18);
+}
+
+.not-found-primary:hover,
+.not-found-secondary:hover {
+  transform: translateY(-2px);
+}
+
+.not-found-primary:hover {
+  background: rgba(14, 22, 39, 0.92);
+}
+
+.not-found-secondary:hover {
+  border-color: var(--navy);
+}
+
+@media (max-width: 768px) {
+  .not-found-shell {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+  }
+
+  .not-found-primary,
+  .not-found-secondary {
+    width: 100%;
+  }
+}
